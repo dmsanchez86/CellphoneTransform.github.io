@@ -1,0 +1,237 @@
+@import url('http://fonts.googleapis.com/css?family=Just+Another+Hand');
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background-image: -webkit-radial-gradient(center,#323232,#000);
+    background-image: radial-gradient(center,#323232,#000);
+    font-size: 100%;
+    height: 100%;
+    overflow: hidden;
+    perspective: 400px;
+    perspective-origin: center ;
+    position: relative;
+    transition: all .5s ease;
+    width: 100%;
+}
+
+.wave{
+    background-image: -webkit-radial-gradient(center,#323232,#000,#323232,#000 98%);
+    background-image: radial-gradient(center,#323232,#000,#323232,#000 98%);
+    border: 5px solid #000;
+    box-shadow: 0 0 5px 2px #323232;
+    box-sizing: border-box;
+    border-radius: 50%;
+    height: 100px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transform: scale(0);
+    transition: transform .2s ease-in-out;
+    width: 100px;
+    
+    &.effect{
+        opacity: 1;
+        transform: scale(.3);
+    }
+}
+
+.logo{
+    background: #323232;
+    border: 15px solid #bdbdbd;
+    border-radius: 5px;
+    bottom: 0;
+    height: 500px;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 500px;
+    transform: translatez(0px) translatex(0px) scaleX(1.8) rotatey(0);
+    transition: transform 1s 1.5s ease-in-out,box-shadow 1s 1.8s ease,border-color 1s .35s linear,border-right-width .5s .4s ease ;
+    transform-style: preserve-3d;
+    
+    &:after,
+    &:before{
+        position: absolute;
+        content: '';
+        border-radius: 50%;
+        background: red;
+        right: -8%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 30px;
+        height: 30px;
+        transform: scale(1.1,2);
+        opacity: 0;
+        transition: opacity .8s ease-out;
+    }
+    &:after{
+        background: #000;
+        transform: scale(1.1,2);
+        z-index: 2;
+        transition-delay: .5s;
+    }
+    &:before{
+        background: #323232;
+        transform: scale(.51,1);
+        z-index: 3;
+         transition-delay: .8s;
+    }
+    
+    > div{
+        left: 0;
+        height: 500px;
+        position: absolute;
+        top: 0;
+        width: 500px;
+        transform: rotatex(0) translatez(0px);
+        opacity:0;
+        transition: all .5s ease-out;
+    }
+    
+    .front{
+        height: 0;
+        overflow: hidden;
+        
+        img{
+            height: auto;
+            max-width: 100%;
+            margin-top: 6rem;
+        }
+    }
+    
+    &.hover{
+        background: transparent;
+        overflow: visible;
+        border-right-width: 50px;
+        transform: translatez(-100px) translatex(123px) scaleX(1.8) rotatey(13deg) rotatex(0deg) rotatez(0deg);
+        box-shadow: 0 0 10px #ddd;
+        border-color: #323232;
+        
+        &:after,
+        &:before{
+            opacity: 1;
+        }
+        
+        > div{
+            opacity: 1;
+        }
+        .front{
+            height: 500px;
+            transform: translatez(0px);
+            box-shadow: 0 0 30px 5px #999 inset;
+            transition: transform .5s 1.2s ease-out,opacity .5s 1s ease-out,height .3s 1.9s ease-in ;
+        }
+        .back{
+            background-color: #212121;
+            transform: translatez(-500px);
+            transition: transform .5s 1s ease-out,opacity .5s 1s ease-out,box-shadow .5s 1.3s ease-out;
+        }
+        .bottom{
+            background-color: #323232;
+            transform: rotatex(-90deg) translatez(250px) translatey(250px);
+            transition: all .5s .2s ease-out;
+        }
+        .top{
+            background-color: #323232;
+            transform: rotatex(90deg) translatez(250px) translatey(-250px);
+            transition: all .5s .2s ease-out;
+        }
+        .right{
+            background-color: #424242;
+            transform: rotatey(90deg) translatez(250px) translatex(250px);
+            transition: all .5s .5s ease-out;
+        }
+        .left{
+            background-color: #424242;
+            transform: rotatey(-90deg) translatez(250px) translatex(-250px);
+            transition: all .5s .5s ease-out;
+        }
+    }
+}
+
+.on_off{
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    border: thin solid #ddd;
+    overflow: hidden;
+    color: #ddd;
+    line-height: 1.5;
+    font-family: 'Just Another Hand', cursive;
+    z-index: 8;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 5%;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: all .4s ease-in-out;
+    
+    &:hover,
+    &:focus,
+    &.active{
+        cursor: pointer;
+        color: #323232;
+        border-color: #323232;
+        
+        &:before{
+            background: #ddd;
+            bottom: inherit;
+            top: 0;
+            height: 100%;
+            
+        }
+    }
+    
+    &.active{
+        
+        &:hover{
+            color: #ddd;
+            
+            &:before{
+                height: 0;
+            }
+        }
+    }
+    
+    &:before{
+        content: '';
+        z-index: -1;
+        width: 100%;
+        height: 0%;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        display: block;
+        background: transparent;
+        transition: height .5s .1s ease;
+        position: absolute;
+    }
+    
+    &:before{
+        transform: rotatex(180deg);
+    }
+}
+
+@-webkit-keyframes wave {
+    0%{transform: scale(0);opacity: 0;}
+    100%{transform: scale(59);opacity: 1;}
+}
+
+@keyframes wave {
+    0%{transform: scale(0);opacity: 0;}
+    100%{transform: scale(59);opacity: 1;}
+}
