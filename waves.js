@@ -5,7 +5,6 @@ window.onload = function(){
     
     btn_switch.onclick = function(){
         var state = this.getAttribute('state');
-      
         if(state == 'off'){
             this.className = 'on_off active';
             this.setAttribute('state','on');
