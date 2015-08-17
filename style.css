@@ -37,7 +37,7 @@ body {
     opacity: 1;
     transform: scale(0.3); }
 
-.logo {
+.cellphone {
   background: #323232;
   border: 15px solid #bdbdbd;
   border-radius: 5px;
@@ -53,7 +53,7 @@ body {
   transform: translatez(0px) translatex(0px) scaleX(1.8) rotatey(0);
   transition: transform 1s 1.5s ease-in-out, box-shadow 1s 1.8s ease, border-color 1s 0.35s linear, border-right-width 0.5s 0.4s ease;
   transform-style: preserve-3d; }
-  .logo:after, .logo:before {
+  .cellphone:after, .cellphone:before {
     position: absolute;
     content: '';
     border-radius: 50%;
@@ -67,17 +67,17 @@ body {
     transform: scale(1.1, 2);
     opacity: 0;
     transition: opacity .8s ease-out; }
-  .logo:after {
+  .cellphone:after {
     background: #000;
     transform: scale(1.1, 2);
     z-index: 2;
     transition-delay: .5s; }
-  .logo:before {
+  .cellphone:before {
     background: #323232;
     transform: scale(0.51, 1);
     z-index: 3;
     transition-delay: .8s; }
-  .logo > div {
+  .cellphone > div {
     left: 0;
     height: 500px;
     position: absolute;
@@ -86,46 +86,46 @@ body {
     transform: rotatex(0) translatez(0px);
     opacity: 0;
     transition: all .5s ease-out; }
-  .logo .front {
+  .cellphone .front {
     height: 0;
     overflow: hidden; }
-    .logo .front img {
+    .cellphone .front img {
       height: auto;
       max-width: 100%;
       margin-top: 6rem; }
-  .logo.hover {
+  .cellphone.hover {
     background: transparent;
     overflow: visible;
     border-right-width: 50px;
     transform: translatez(-100px) translatex(123px) scaleX(1.8) rotatey(13deg) rotatex(0deg) rotatez(0deg);
     box-shadow: 0 0 10px #ddd;
     border-color: #323232; }
-    .logo.hover:after, .logo.hover:before {
+    .cellphone.hover:after, .cellphone.hover:before {
       opacity: 1; }
-    .logo.hover > div {
+    .cellphone.hover > div {
       opacity: 1; }
-    .logo.hover .front {
+    .cellphone.hover .front {
       height: 500px;
       transform: translatez(0px);
       box-shadow: 0 0 30px 5px #999 inset;
       transition: transform 0.5s 1.2s ease-out, opacity 0.5s 1s ease-out, height 0.3s 1.9s ease-in; }
-    .logo.hover .back {
+    .cellphone.hover .back {
       background-color: #212121;
       transform: translatez(-500px);
       transition: transform .5s 1s ease-out,opacity .5s 1s ease-out,box-shadow .5s 1.3s ease-out; }
-    .logo.hover .bottom {
+    .cellphone.hover .bottom {
       background-color: #323232;
       transform: rotatex(-90deg) translatez(250px) translatey(250px);
       transition: all .5s .2s ease-out; }
-    .logo.hover .top {
+    .cellphone.hover .top {
       background-color: #323232;
       transform: rotatex(90deg) translatez(250px) translatey(-250px);
       transition: all .5s .2s ease-out; }
-    .logo.hover .right {
+    .cellphone.hover .right {
       background-color: #424242;
       transform: rotatey(90deg) translatez(250px) translatex(250px);
       transition: all .5s .5s ease-out; }
-    .logo.hover .left {
+    .cellphone.hover .left {
       background-color: #424242;
       transform: rotatey(-90deg) translatez(250px) translatex(-250px);
       transition: all .5s .5s ease-out; }
