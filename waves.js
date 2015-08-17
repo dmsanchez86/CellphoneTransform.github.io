@@ -8,13 +8,29 @@ window.onload = function(){
         if(state == 'off'){
             this.className = 'on_off active';
             this.setAttribute('state','on');
-            cellphone.className  = 'cellphone hover';
+            cellphone.className  = 'cellphone active';
         }else{
-            this.className = 'on_off';
+            this.className = 'on_off inactive';
             this.setAttribute('state','off');
             cellphone.className  = 'cellphone';
         }
     };
+    
+    btn_switch.onmouseover = function(){
+        var state  = this.getAttribute('state');
+        if(state == 'off')
+            this.className = "on_off inactive hover";
+        else
+            this.className = "on_off active hover";
+    }
+    
+    btn_switch.onmouseout = function(){
+        var state  = this.getAttribute('state');
+        if(state == 'off')
+            this.className = "on_off inactive";
+        else
+            this.className = "on_off active";
+    }
     
     document.onclick = function(evt){
         var position_X = evt.clientX - 50;

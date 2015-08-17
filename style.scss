@@ -16,7 +16,7 @@ body{
     font-size: 100%;
     height: 100%;
     overflow: hidden;
-    perspective: 400px;
+    perspective: 2000px;
     perspective-origin: center ;
     position: relative;
     transition: all .5s ease;
@@ -75,7 +75,7 @@ body{
         height: 30px;
         transform: scale(1.1,2);
         opacity: 0;
-        transition: opacity .8s ease-out;
+        transition: opacity .8s ease-out,transform 3.5s .5s ease;
     }
     &:after{
         background: #000;
@@ -84,10 +84,10 @@ body{
         transition-delay: .5s;
     }
     &:before{
-        background: #323232;
+        background: #000;
         transform: scale(.51,1);
         z-index: 3;
-         transition-delay: .8s;
+        transition-delay: .8s;
     }
     
     > div{
@@ -104,6 +104,7 @@ body{
     .front{
         height: 0;
         overflow: hidden;
+        transform: scale(0);
         
         img{
             height: auto;
@@ -112,17 +113,30 @@ body{
         }
     }
     
-    &.hover{
+    &.active{
         background: transparent;
         overflow: visible;
         border-right-width: 50px;
-        transform: translatez(-100px) translatex(123px) scaleX(1.8) rotatey(13deg) rotatex(0deg) rotatez(0deg);
+        transform: translatez(-380px) translatex(30px) scaleX(1.8) rotatey(4deg) rotatex(0deg) rotatez(0deg);
         box-shadow: 0 0 10px #ddd;
-        border-color: #323232;
+        border-color: #fff;
         
         &:after,
         &:before{
             opacity: 1;
+        }
+        
+        &:after{
+            transform: scale(1.1, 2) rotate(0deg);
+            background: #fff;
+            box-sizing: border-box;
+            border: 2px solid #000;
+        }
+        
+        &:hover{
+            &:after{
+                transform: scale(1.1, 2) translatex(360deg);
+            }
         }
         
         > div{
@@ -130,13 +144,13 @@ body{
         }
         .front{
             height: 500px;
-            transform: translatez(0px);
+            transform: scale(1) translatez(0px);
             box-shadow: 0 0 30px 5px #999 inset;
-            transition: transform .5s 1.2s ease-out,opacity .5s 1s ease-out,height .3s 1.9s ease-in ;
+            transition: transform .35s 2s ease-out,opacity .5s 1s ease-out,height .3s 1.9s ease-in ;
         }
         .back{
             background-color: #212121;
-            transform: translatez(-500px);
+            transform: translatez(-280px);
             transition: transform .5s 1s ease-out,opacity .5s 1s ease-out,box-shadow .5s 1.3s ease-out;
         }
         .bottom{
@@ -178,33 +192,49 @@ body{
     top: 5%;
     text-align: center;
     font-size: 1.5rem;
+    cursor: pointer;
+    transform-origin: center bottom;
     transition: all .4s ease-in-out;
     
-    &:hover,
-    &:focus,
-    &.active{
-        cursor: pointer;
-        color: #323232;
-        border-color: #323232;
-        
-        &:before{
-            background: #ddd;
-            bottom: inherit;
-            top: 0;
-            height: 100%;
-            
-        }
+    &.hover{
+        -webkit-animation: skew .35s 2 linear;
+        animation: skew .35s 2 linear;
     }
     
     &.active{
+        color: #ef5350;
+        border-color: #ef5350;
         
-        &:hover{
-            color: #ddd;
+        &:hover,
+        &:focus{
+            color: #66bb6a;
+            border-color: #66bb6a;
             
             &:before{
-                height: 0;
+                background: transparent;
             }
         }
+    }
+
+    &.inactive{
+        color: #66bb6a;
+        border-color: #66bb6a;
+        
+        &:hover,
+        &:focus{
+            color: #ef5350;
+            border-color: #ef5350;
+            
+            &:before{
+                background: transparent;
+            }
+        }
+    }
+    
+    &:hover,
+    &:focus{
+        -webkit-animation-play-state: running;
+        animation-play-state: running;
     }
     
     &:before{
@@ -234,4 +264,22 @@ body{
 @keyframes wave {
     0%{transform: scale(0);opacity: 0;}
     100%{transform: scale(59);opacity: 1;}
+}
+
+@-webkit-keyframes skew{
+    12%,76%{
+        transform: skewx(-5deg);
+    }
+    36%,85%{
+        transform: skewx(5deg);
+    }
+}
+
+@keyframes skew{
+    12%,76%{
+        transform: skewx(-5deg);
+    }
+    36%,85%{
+        transform: skewx(5deg);
+    }
 }

@@ -13,7 +13,7 @@ body {
   font-size: 100%;
   height: 100%;
   overflow: hidden;
-  perspective: 400px;
+  perspective: 2000px;
   perspective-origin: center;
   position: relative;
   transition: all .5s ease;
@@ -66,14 +66,14 @@ body {
     height: 30px;
     transform: scale(1.1, 2);
     opacity: 0;
-    transition: opacity .8s ease-out; }
+    transition: opacity .8s ease-out,transform 3.5s .5s ease; }
   .cellphone:after {
     background: #000;
     transform: scale(1.1, 2);
     z-index: 2;
     transition-delay: .5s; }
   .cellphone:before {
-    background: #323232;
+    background: #000;
     transform: scale(0.51, 1);
     z-index: 3;
     transition-delay: .8s; }
@@ -88,44 +88,52 @@ body {
     transition: all .5s ease-out; }
   .cellphone .front {
     height: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    transform: scale(0); }
     .cellphone .front img {
       height: auto;
       max-width: 100%;
       margin-top: 6rem; }
-  .cellphone.hover {
+  .cellphone.active {
     background: transparent;
     overflow: visible;
     border-right-width: 50px;
-    transform: translatez(-100px) translatex(123px) scaleX(1.8) rotatey(13deg) rotatex(0deg) rotatez(0deg);
+    transform: translatez(-380px) translatex(30px) scaleX(1.8) rotatey(4deg) rotatex(0deg) rotatez(0deg);
     box-shadow: 0 0 10px #ddd;
-    border-color: #323232; }
-    .cellphone.hover:after, .cellphone.hover:before {
+    border-color: #fff; }
+    .cellphone.active:after, .cellphone.active:before {
       opacity: 1; }
-    .cellphone.hover > div {
+    .cellphone.active:after {
+      transform: scale(1.1, 2) rotate(0deg);
+      background: #fff;
+      box-sizing: border-box;
+      border: 2px solid #000; }
+    .cellphone.active:hover:after {
+      transform: scale(1.1, 2) rotate(360deg); }
+    .cellphone.active > div {
       opacity: 1; }
-    .cellphone.hover .front {
+    .cellphone.active .front {
       height: 500px;
-      transform: translatez(0px);
+      transform: scale(1) translatez(0px);
       box-shadow: 0 0 30px 5px #999 inset;
-      transition: transform 0.5s 1.2s ease-out, opacity 0.5s 1s ease-out, height 0.3s 1.9s ease-in; }
-    .cellphone.hover .back {
+      transition: transform 0.35s 2s ease-out, opacity 0.5s 1s ease-out, height 0.3s 1.9s ease-in; }
+    .cellphone.active .back {
       background-color: #212121;
-      transform: translatez(-500px);
+      transform: translatez(-280px);
       transition: transform .5s 1s ease-out,opacity .5s 1s ease-out,box-shadow .5s 1.3s ease-out; }
-    .cellphone.hover .bottom {
+    .cellphone.active .bottom {
       background-color: #323232;
       transform: rotatex(-90deg) translatez(250px) translatey(250px);
       transition: all .5s .2s ease-out; }
-    .cellphone.hover .top {
+    .cellphone.active .top {
       background-color: #323232;
       transform: rotatex(90deg) translatez(250px) translatey(-250px);
       transition: all .5s .2s ease-out; }
-    .cellphone.hover .right {
+    .cellphone.active .right {
       background-color: #424242;
       transform: rotatey(90deg) translatez(250px) translatex(250px);
       transition: all .5s .5s ease-out; }
-    .cellphone.hover .left {
+    .cellphone.active .left {
       background-color: #424242;
       transform: rotatey(-90deg) translatez(250px) translatex(-250px);
       transition: all .5s .5s ease-out; }
@@ -146,20 +154,31 @@ body {
   top: 5%;
   text-align: center;
   font-size: 1.5rem;
+  cursor: pointer;
+  transform-origin: center bottom;
   transition: all .4s ease-in-out; }
-  .on_off:hover, .on_off:focus, .on_off.active {
-    cursor: pointer;
-    color: #323232;
-    border-color: #323232; }
-    .on_off:hover:before, .on_off:focus:before, .on_off.active:before {
-      background: #ddd;
-      bottom: inherit;
-      top: 0;
-      height: 100%; }
-  .on_off.active:hover {
-    color: #ddd; }
-    .on_off.active:hover:before {
-      height: 0; }
+  .on_off.hover {
+    -webkit-animation: skew .35s 2 linear;
+    animation: skew .35s 2 linear; }
+  .on_off.active {
+    color: #ef5350;
+    border-color: #ef5350; }
+    .on_off.active:hover, .on_off.active:focus {
+      color: #66bb6a;
+      border-color: #66bb6a; }
+      .on_off.active:hover:before, .on_off.active:focus:before {
+        background: transparent; }
+  .on_off.inactive {
+    color: #66bb6a;
+    border-color: #66bb6a; }
+    .on_off.inactive:hover, .on_off.inactive:focus {
+      color: #ef5350;
+      border-color: #ef5350; }
+      .on_off.inactive:hover:before, .on_off.inactive:focus:before {
+        background: transparent; }
+  .on_off:hover, .on_off:focus {
+    -webkit-animation-play-state: running;
+    animation-play-state: running; }
   .on_off:before {
     content: '';
     z-index: -1;
@@ -189,5 +208,15 @@ body {
   100% {
     transform: scale(59);
     opacity: 1; } }
+@-webkit-keyframes skew {
+  12%,76% {
+    transform: skewx(-5deg); }
+  36%,85% {
+    transform: skewx(5deg); } }
+@keyframes skew {
+  12%,76% {
+    transform: skewx(-5deg); }
+  36%,85% {
+    transform: skewx(5deg); } }
 
 /*# sourceMappingURL=style.css.map */
