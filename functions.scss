@@ -1,0 +1,76 @@
+// Function to set all prefixes
+@mixin prefixes($property, $value) {
+    -webkit-#{$property} : $value;
+     -khtml-#{$property} : $value;
+       -moz-#{$property} : $value;
+        -ms-#{$property} : $value;
+         -o-#{$property} : $value;
+            #{$property} : $value;
+}
+
+// Function to set border radius
+@mixin animation($radius) {
+  @include prefixes(animation, $radius);
+}
+
+// Function to set border radius
+@mixin border-radius($radius) {
+  @include prefixes(border-radius, $radius);
+}
+
+// Funtion to set transition
+@mixin box-shadow($value) {
+  @include prefixes(box-shadow , $value);
+}
+
+// Function to set box sizing
+@mixin box-sizing($value) {
+  @include prefixes(box-sizing , $value);
+}
+
+// Funtion to set perspective
+@mixin perspective($value) {
+  @include prefixes(perspective, $value);
+}
+
+// Funtion to set perspective-origin
+@mixin perspective-origin($value) {
+  @include prefixes(perspective-origin, $value);
+}
+
+// Function to set gradient
+@mixin radial($param,$value){
+    background-image: -webkit-#{$param}-gradient($value);
+    background-image:  -khtml-#{$param}-gradient($value);
+    background-image:    -moz-#{$param}-gradient($value);
+    background-image:     -ms-#{$param}-gradient($value);
+    background-image:      -o-#{$param}-gradient($value);
+    background-image:         #{$param}-gradient($value);
+}
+
+// Function to reset html
+@mixin reset(){
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+// Funtion to set transition
+@mixin transition($value) {
+  @include prefixes(transition, $value);
+}
+
+// Function to set transforms
+@mixin transform($value){
+    @include prefixes(transform, $value);
+}
+
+// Function to set transform-style
+@mixin transform-origin($value){
+    @include prefixes(transform-origin, $value);
+}
+
+// Function to set transform-style
+@mixin transform-style($value){
+    @include prefixes(transform-style, $value);
+}

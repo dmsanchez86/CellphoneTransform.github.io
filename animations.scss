@@ -1,0 +1,31 @@
+// Animation for wave
+@-webkit-keyframes wave {
+    0%{ @include transform(scale(0));opacity: 0;}
+    100%{@include transform(scale(59));opacity: 1;}
+}
+
+@-moz-keyframes wave {
+    0%{ @include transform(scale(0));opacity: 0;}
+    100%{@include transform(scale(59));opacity: 1;}
+}
+
+@keyframes wave {
+    0%{ @include transform(scale(0));opacity: 0;}
+    100%{@include transform(scale(59));opacity: 1;}
+}
+
+// Animation for button on / off
+@-webkit-keyframes skew{
+    12%,76%{@include transform(skewx(-5deg));}
+    36%,85%{@include transform(skewx(5deg));}
+}
+
+@-moz-keyframes skew{
+    12%,76%{@include transform(skewx(-5deg));}
+    36%,85%{@include transform(skewx(5deg));}
+}
+
+@keyframes skew{
+    12%,76%{@include transform(skewx(-5deg));}
+    36%,85%{@include transform(skewx(5deg));}
+}

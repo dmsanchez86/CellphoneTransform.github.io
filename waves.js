@@ -22,7 +22,7 @@ window.onload = function(){
             this.className = "on_off inactive hover";
         else
             this.className = "on_off active hover";
-    }
+    };
     
     btn_switch.onmouseout = function(){
         var state  = this.getAttribute('state');
@@ -30,7 +30,7 @@ window.onload = function(){
             this.className = "on_off inactive";
         else
             this.className = "on_off active";
-    }
+    };
     
     document.onclick = function(evt){
         var position_X = evt.clientX - 50;

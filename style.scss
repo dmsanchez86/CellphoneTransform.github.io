@@ -1,53 +1,50 @@
 @import url('http://fonts.googleapis.com/css?family=Just+Another+Hand');
 
-*{
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+@import 'functions';
+@import 'variables';
+
+*{ @include reset(); }
 
 html{
     height: 100%;
 }
 
 body{
-    background-image: -webkit-radial-gradient(center,#323232,#000);
-    background-image: radial-gradient(center,#323232,#000);
     font-size: 100%;
     height: 100%;
     overflow: hidden;
-    perspective: 2000px;
-    perspective-origin: center ;
     position: relative;
-    transition: all .5s ease;
     width: 100%;
+    @include radial(radial, (center, #323232, #000) );
+    @include perspective(2000px);
+    @include perspective-origin(center);
+    @include transition(all .5s ease);
 }
 
 .wave{
-    background-image: -webkit-radial-gradient(center,#323232,#000,#323232,#000 98%);
-    background-image: radial-gradient(center,#323232,#000,#323232,#000 98%);
     border: 5px solid #000;
-    box-shadow: 0 0 5px 2px #323232;
-    box-sizing: border-box;
-    border-radius: 50%;
-    height: 100px;
+    height: 100px * 100;
     left: 0px;
     position: absolute;
     top: 0px;
-    transform: scale(0);
-    transition: transform .2s ease-in-out;
-    width: 100px;
+    width: 100px * 100;
+    @include radial(radial, (center,#323232,#000,#323232,#000 98%) );
+    @include border-radius(50%);
+    @include box-shadow(0 0 5px 2px #323232);
+    @include box-sizing(border-box);
+    @include transition(transform .2s ease-in-out);
+    @include transform(scale(0));
     
     &.effect{
         opacity: 1;
-        transform: scale(.3);
+        @include animation(wave 1s 1 ease);
+        @include transform(scale(.3));
     }
 }
 
 .cellphone{
     background: #323232;
     border: 15px solid #bdbdbd;
-    border-radius: 5px;
     bottom: 0;
     height: 500px;
     left: 0;
@@ -57,15 +54,15 @@ body{
     right: 0;
     top: 0;
     width: 500px;
-    transform: translatez(0px) translatex(0px) scaleX(1.8) rotatey(0);
-    transition: transform 1s 1.5s ease-in-out,box-shadow 1s 1.8s ease,border-color 1s .35s linear,border-right-width .5s .4s ease ;
-    transform-style: preserve-3d;
+    @include border-radius(5px);
+    @include transform( translatez(0px) translatex(0px) scaleX(1.8) rotatey(0) );
+    @include transition((transform 1s 1.5s ease-in-out,box-shadow 1s 1.8s ease,border-color 1s .35s linear,border-right-width .5s .4s ease)) ;
+    @include transform-style(preserve-3d);
     
     &:after,
     &:before{
         position: absolute;
         content: '';
-        border-radius: 50%;
         background: red;
         right: -8%;
         top: 0;
@@ -73,21 +70,22 @@ body{
         margin: auto;
         width: 30px;
         height: 30px;
-        transform: scale(1.1,2);
         opacity: 0;
-        transition: opacity .8s ease-out,transform 3.5s .5s ease;
+        @include border-radius(50%);
+        @include transform( scale(1.1,2));
+        @include transition(( opacity .8s ease-out,transform 3.5s .5s ease));
     }
     &:after{
         background: #000;
-        transform: scale(1.1,2);
         z-index: 2;
         transition-delay: .5s;
+        @include transform(scale(1.1,2));
     }
     &:before{
         background: #000;
-        transform: scale(.51,1);
         z-index: 3;
         transition-delay: .8s;
+        @include transform(scale(.51,1));
     }
     
     > div{
@@ -96,15 +94,15 @@ body{
         position: absolute;
         top: 0;
         width: 500px;
-        transform: rotatex(0) translatez(0px);
-        opacity:0;
-        transition: all .5s ease-out;
+        opacity: 0;
+        @include transition(all .5s ease-out);
+        @include transform(rotatex(0) translatez(0px));
     }
     
     .front{
         height: 0;
         overflow: hidden;
-        transform: scale(0);
+        @include transform(scale(0));
         
         img{
             height: auto;
@@ -117,9 +115,9 @@ body{
         background: transparent;
         overflow: visible;
         border-right-width: 50px;
-        transform: translatez(-380px) translatex(30px) scaleX(1.8) rotatey(4deg) rotatex(0deg) rotatez(0deg);
-        box-shadow: 0 0 10px #ddd;
         border-color: #fff;
+        @include box-shadow(0 0 10px #ddd);
+        @include transform( translatez(-380px) translatex(30px) scaleX(1.8) rotatey(4deg) rotatex(0deg) rotatez(0deg));
         
         &:after,
         &:before{
@@ -127,15 +125,15 @@ body{
         }
         
         &:after{
-            transform: scale(1.1, 2) rotate(0deg);
             background: #fff;
-            box-sizing: border-box;
             border: 2px solid #000;
+            @include box-sizing(border-box);
+            @include transform(scale(1.1, 2) rotate(0deg));
         }
         
         &:hover{
             &:after{
-                transform: scale(1.1, 2) translatex(360deg);
+                @include transform(scale(1.1, 2) translatex(360deg));
             }
         }
         
@@ -144,34 +142,34 @@ body{
         }
         .front{
             height: 500px;
-            transform: scale(1) translatez(0px);
-            box-shadow: 0 0 30px 5px #999 inset;
-            transition: transform .35s 2s ease-out,opacity .5s 1s ease-out,height .3s 1.9s ease-in ;
+            @include box-shadow(0 0 30px 5px #999 inset);
+            @include transform(scale(1) translatez(0px));
+            @include transition((transform .35s 2s ease-out,opacity .5s 1s ease-out,height .3s 1.9s ease-in));
         }
         .back{
             background-color: #212121;
-            transform: translatez(-280px);
-            transition: transform .5s 1s ease-out,opacity .5s 1s ease-out,box-shadow .5s 1.3s ease-out;
+            @include transform(translatez(-280px));
+            @include transition((transform .5s 1s ease-out,opacity .5s 1s ease-out,box-shadow .5s 1.3s ease-out));
         }
         .bottom{
             background-color: #323232;
-            transform: rotatex(-90deg) translatez(250px) translatey(250px);
-            transition: all .5s .2s ease-out;
+            @include transform(rotatex(-90deg) translatez(250px) translatey(250px));
+            @include transition(all .5s .2s ease-out);
         }
         .top{
             background-color: #323232;
-            transform: rotatex(90deg) translatez(250px) translatey(-250px);
-            transition: all .5s .2s ease-out;
+            @include transform(rotatex(90deg) translatez(250px) translatey(-250px));
+            @include transition(all .5s .2s ease-out);
         }
         .right{
             background-color: #424242;
-            transform: rotatey(90deg) translatez(250px) translatex(250px);
-            transition: all .5s .5s ease-out;
+            @include transform(rotatey(90deg) translatez(250px) translatex(250px));
+            @include transition(all .5s .5s ease-out);
         }
         .left{
             background-color: #424242;
-            transform: rotatey(-90deg) translatez(250px) translatex(-250px);
-            transition: all .5s .5s ease-out;
+            @include transform(rotatey(-90deg) translatez(250px) translatex(-250px));
+            @include transition(all .5s .5s ease-out);
         }
     }
 }
@@ -193,12 +191,11 @@ body{
     text-align: center;
     font-size: 1.5rem;
     cursor: pointer;
-    transform-origin: center bottom;
-    transition: all .4s ease-in-out;
+    @include transform-origin(center bottom);
+    @include transition(all .4s ease-in-out);
     
     &.hover{
-        -webkit-animation: skew .35s 2 linear;
-        animation: skew .35s 2 linear;
+        @include animation(skew .35s 2 linear);
     }
     
     &.active{
@@ -234,6 +231,8 @@ body{
     &:hover,
     &:focus{
         -webkit-animation-play-state: running;
+        -moz-animation-play-state: running;
+        -o-animation-play-state: running;
         animation-play-state: running;
     }
     
@@ -247,39 +246,13 @@ body{
         left: 0;
         display: block;
         background: transparent;
-        transition: height .5s .1s ease;
         position: absolute;
+        @include transition(height .5s .1s ease);
     }
     
     &:before{
-        transform: rotatex(180deg);
+        @include transform(rotatex(180deg));
     }
 }
 
-@-webkit-keyframes wave {
-    0%{transform: scale(0);opacity: 0;}
-    100%{transform: scale(59);opacity: 1;}
-}
-
-@keyframes wave {
-    0%{transform: scale(0);opacity: 0;}
-    100%{transform: scale(59);opacity: 1;}
-}
-
-@-webkit-keyframes skew{
-    12%,76%{
-        transform: skewx(-5deg);
-    }
-    36%,85%{
-        transform: skewx(5deg);
-    }
-}
-
-@keyframes skew{
-    12%,76%{
-        transform: skewx(-5deg);
-    }
-    36%,85%{
-        transform: skewx(5deg);
-    }
-}
+@import 'animations';
