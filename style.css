@@ -107,7 +107,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  width: 340px;
+  width: 320px;
   -webkit-border-radius: 5px;
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -185,7 +185,7 @@ body {
     height: 480px;
     position: absolute;
     top: 0;
-    width: 340px;
+    width: 320px;
     opacity: 0;
     -webkit-transition: all 0.5s ease-out;
     -khtml-transition: all 0.5s ease-out;
@@ -292,12 +292,12 @@ body {
       transition: transform 0.5s 1s ease-out, opacity 0.5s 1s ease-out, box-shadow 0.5s 1.3s ease-out; }
     .cellphone.active .bottom {
       background-color: #323232;
-      -webkit-transform: rotatex(-90deg) translatez(240px) translatey(170px);
-      -khtml-transform: rotatex(-90deg) translatez(240px) translatey(170px);
-      -moz-transform: rotatex(-90deg) translatez(240px) translatey(170px);
-      -ms-transform: rotatex(-90deg) translatez(240px) translatey(170px);
-      -o-transform: rotatex(-90deg) translatez(240px) translatey(170px);
-      transform: rotatex(-90deg) translatez(240px) translatey(170px);
+      -webkit-transform: rotatex(-90deg) translatez(240px) translatey(160px);
+      -khtml-transform: rotatex(-90deg) translatez(240px) translatey(160px);
+      -moz-transform: rotatex(-90deg) translatez(240px) translatey(160px);
+      -ms-transform: rotatex(-90deg) translatez(240px) translatey(160px);
+      -o-transform: rotatex(-90deg) translatez(240px) translatey(160px);
+      transform: rotatex(-90deg) translatez(240px) translatey(160px);
       -webkit-transition: all 0.5s 0.2s ease-out;
       -khtml-transition: all 0.5s 0.2s ease-out;
       -moz-transition: all 0.5s 0.2s ease-out;
@@ -306,12 +306,12 @@ body {
       transition: all 0.5s 0.2s ease-out; }
     .cellphone.active .top {
       background-color: #323232;
-      -webkit-transform: rotatex(90deg) translatez(240px) translatey(-170px);
-      -khtml-transform: rotatex(90deg) translatez(240px) translatey(-170px);
-      -moz-transform: rotatex(90deg) translatez(240px) translatey(-170px);
-      -ms-transform: rotatex(90deg) translatez(240px) translatey(-170px);
-      -o-transform: rotatex(90deg) translatez(240px) translatey(-170px);
-      transform: rotatex(90deg) translatez(240px) translatey(-170px);
+      -webkit-transform: rotatex(90deg) translatez(240px) translatey(-160px);
+      -khtml-transform: rotatex(90deg) translatez(240px) translatey(-160px);
+      -moz-transform: rotatex(90deg) translatez(240px) translatey(-160px);
+      -ms-transform: rotatex(90deg) translatez(240px) translatey(-160px);
+      -o-transform: rotatex(90deg) translatez(240px) translatey(-160px);
+      transform: rotatex(90deg) translatez(240px) translatey(-160px);
       -webkit-transition: all 0.5s 0.2s ease-out;
       -khtml-transition: all 0.5s 0.2s ease-out;
       -moz-transition: all 0.5s 0.2s ease-out;
@@ -320,12 +320,12 @@ body {
       transition: all 0.5s 0.2s ease-out; }
     .cellphone.active .right {
       background-color: #424242;
-      -webkit-transform: rotatey(90deg) translatez(170px) translatex(170px);
-      -khtml-transform: rotatey(90deg) translatez(170px) translatex(170px);
-      -moz-transform: rotatey(90deg) translatez(170px) translatex(170px);
-      -ms-transform: rotatey(90deg) translatez(170px) translatex(170px);
-      -o-transform: rotatey(90deg) translatez(170px) translatex(170px);
-      transform: rotatey(90deg) translatez(170px) translatex(170px);
+      -webkit-transform: rotatey(90deg) translatez(160px) translatex(160px);
+      -khtml-transform: rotatey(90deg) translatez(160px) translatex(160px);
+      -moz-transform: rotatey(90deg) translatez(160px) translatex(160px);
+      -ms-transform: rotatey(90deg) translatez(160px) translatex(160px);
+      -o-transform: rotatey(90deg) translatez(160px) translatex(160px);
+      transform: rotatey(90deg) translatez(160px) translatex(160px);
       -webkit-transition: all 0.5s 0.5s ease-out;
       -khtml-transition: all 0.5s 0.5s ease-out;
       -moz-transition: all 0.5s 0.5s ease-out;
@@ -334,12 +334,12 @@ body {
       transition: all 0.5s 0.5s ease-out; }
     .cellphone.active .left {
       background-color: #424242;
-      -webkit-transform: rotatey(-90deg) translatez(170px) translatex(-170px);
-      -khtml-transform: rotatey(-90deg) translatez(170px) translatex(-170px);
-      -moz-transform: rotatey(-90deg) translatez(170px) translatex(-170px);
-      -ms-transform: rotatey(-90deg) translatez(170px) translatex(-170px);
-      -o-transform: rotatey(-90deg) translatez(170px) translatex(-170px);
-      transform: rotatey(-90deg) translatez(170px) translatex(-170px);
+      -webkit-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+      -khtml-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+      -moz-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+      -ms-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+      -o-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+      transform: rotatey(-90deg) translatez(160px) translatex(-160px);
       -webkit-transition: all 0.5s 0.5s ease-out;
       -khtml-transition: all 0.5s 0.5s ease-out;
       -moz-transition: all 0.5s 0.5s ease-out;
