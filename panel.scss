@@ -1,0 +1,84 @@
+@import url('http://fonts.googleapis.com/css?family=Just+Another+Hand');
+
+@import 'variables';
+@import 'functions';
+
+.panel_left{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    padding: 1rem .5rem;
+    max-height: 185px;
+    margin: auto;
+    
+    .content{
+    
+        h6{
+            font-family: 'Just Another Hand', cursive;
+            color: $btn-active;
+            font-size: 1.3rem;
+            text-align: center;
+            
+        }
+        > div{
+            margin: 1rem 0;
+            cursor: pointer;
+            
+            &:hover,
+            &focus{
+                label{
+                    color: $cellphone-active;
+                }
+            }
+        }
+        
+        input[type=radio]{
+            display: none;
+        }
+        
+        label{
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+            display: block;
+            font-family: 'Just Another Hand';
+            @include transition(color .5s ease);
+        }
+        
+        .preview{
+            background: #888;
+            border: 2px solid #323232;
+            margin: 0 auto;
+            position: relative;
+            @include border-radius(2px);
+            
+            &:before{
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 2.5%;
+                width: 95%;
+                height: 95%;
+                content: '';
+                background: #323232;
+            }
+        }
+        
+        .landscape{
+            .preview{
+                width: 48px;
+                height: 32px;
+            }
+        }
+        
+        .portrait{
+            .preview{
+                width: 32px;
+                height: 48px;
+            }
+        }
+    }
+}

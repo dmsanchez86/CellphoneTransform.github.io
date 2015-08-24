@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Cellphone 3D</title>
-		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link id="stylesheet" rel="stylesheet" href="portrait.css" type="text/css" />
+		<link rel="stylesheet" href="panel.css" type="text/css" />
 	</head>
 
 	<body class="body">
@@ -17,6 +18,22 @@
         <div class="right"></div>
         <div class="top"></div>
         <div class="left"></div>
+      </div>
+      
+      <div class="panel_left">
+        <div class="content">
+          <h6>CellPhone Position</h6>
+          <div class="portrait">
+            <input type="radio" name="position" id="portrait" value="portrait"/>
+            <label for="portrait">Portrait</label>
+            <div class="preview"></div>
+          </div>
+          <div class="landscape">
+            <input type="radio" name="position" id="landscape" value="landscape"/>
+            <label for="landscape">Landscape</label>
+            <div class="preview"></div>
+          </div>
+        </div>
       </div>
       
       <div class="on_off inactive" state="off">On / Off</div>

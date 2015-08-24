@@ -2,6 +2,17 @@ window.onload = function(){
     var cellphone = document.querySelector('.cellphone');
     var body = document.querySelector('.body');
     var btn_switch = document.querySelector('.on_off');
+    var position_cellphone = document.querySelectorAll('input[type=radio]');
+    var stylesheet = document.querySelector('#stylesheet');
+    
+    for (var i = 0; i < position_cellphone.length; i++) {
+        position_cellphone[i].onchange = function(){
+            
+            stylesheet.setAttribute('href',this.value + '.css');
+        };
+    }
+    
+    console.log(position_cellphone);
     
     btn_switch.onclick = function(){
         var state = this.getAttribute('state');

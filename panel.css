@@ -1,0 +1,63 @@
+@import url("http://fonts.googleapis.com/css?family=Just+Another+Hand");
+.panel_left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  padding: 1rem .5rem;
+  max-height: 185px;
+  margin: auto; }
+  .panel_left .content h6 {
+    font-family: 'Just Another Hand', cursive;
+    color: #66bb6a;
+    font-size: 1.3rem;
+    text-align: center; }
+  .panel_left .content > div {
+    margin: 1rem 0;
+    cursor: pointer; }
+    .panel_left .content > div:hover label, .panel_left .content > divfocus label {
+      color: #fbc02d; }
+  .panel_left .content input[type=radio] {
+    display: none; }
+  .panel_left .content label {
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    font-family: 'Just Another Hand';
+    -webkit-transition: color 0.5s ease;
+    -khtml-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    transition: color 0.5s ease; }
+  .panel_left .content .preview {
+    background: #888;
+    border: 2px solid #323232;
+    margin: 0 auto;
+    position: relative;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px; }
+    .panel_left .content .preview:before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 2.5%;
+      width: 95%;
+      height: 95%;
+      content: '';
+      background: #323232; }
+  .panel_left .content .landscape .preview {
+    width: 48px;
+    height: 32px; }
+  .panel_left .content .portrait .preview {
+    width: 32px;
+    height: 48px; }
+
+/*# sourceMappingURL=panel.css.map */

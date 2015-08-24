@@ -135,9 +135,9 @@ body {
   .cellphone:after, .cellphone:before {
     position: absolute;
     content: '';
-    right: 0;
-    left: 0;
     bottom: -40px;
+    left: 0;
+    right: 0;
     margin: auto;
     width: 30px;
     height: 30px;
@@ -521,4 +521,4 @@ body {
     -o-transform: skewx(5deg);
     transform: skewx(5deg); } }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=portrait.css.map */
