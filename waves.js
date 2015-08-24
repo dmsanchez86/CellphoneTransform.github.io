@@ -42,6 +42,7 @@ window.onload = function(){
         wave.style.top = position_Y + 'px';
         wave.className = 'wave';
         
+        body.style.perspectiveOrigin = 'center';
         body.appendChild(wave);
         
         setTimeout(function(){
@@ -49,6 +50,9 @@ window.onload = function(){
             setTimeout(function(){
                 body.removeChild(wave);
             },600);
+            setTimeout(function() {
+                body.style.perspectiveOrigin = '67% 44%';
+            },2000);
         },10);
         
     };

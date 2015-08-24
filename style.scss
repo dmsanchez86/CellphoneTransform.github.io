@@ -16,7 +16,7 @@ body{
     position: relative;
     width: 100%;
     @include radial(radial, (center, #323232, #000) );
-    @include perspective(2000px);
+    @include perspective($perspective-body);
     @include perspective-origin(center);
     @include transition(all .5s ease);
 }
@@ -28,72 +28,71 @@ body{
     position: absolute;
     top: 0px;
     width: 100px * 100;
-    @include radial(radial, (center,#323232,#000,#323232,#000 98%) );
+    @include radial(radial, (center,red,#000,red,#000 98%) );
     @include border-radius(50%);
     @include box-shadow(0 0 5px 2px #323232);
     @include box-sizing(border-box);
-    @include transition(transform .2s ease-in-out);
-    @include transform(scale(0));
+    @include transition(transform 2s ease-in-out);
+    @include transform(scale(1));
     
     &.effect{
         opacity: 1;
         @include animation(wave 1s 1 ease);
-        @include transform(scale(.3));
+        @include transform(scale(1));
     }
 }
 
 .cellphone{
     background: #323232;
-    border: 15px solid #bdbdbd;
+    border: 15px solid #111;
     bottom: 0;
-    height: 500px;
+    height: $height-cellphone;
     left: 0;
     margin: auto;
     overflow: hidden;
     position: absolute;
     right: 0;
     top: 0;
-    width: 500px;
+    width: $width-cellphone;
     @include border-radius(5px);
-    @include transform( translatez(0px) translatex(0px) scaleX(1.8) rotatey(0) );
-    @include transition((transform 1s 1.5s ease-in-out,box-shadow 1s 1.8s ease,border-color 1s .35s linear,border-right-width .5s .4s ease)) ;
+    @include transform( translatez(0px) translatex(0px) scaleX(1) rotatey(0) );
+    @include transition((transform 1s 1.5s ease-in-out,box-shadow 1s 1.8s ease,border-color 1s .35s linear,border-bottom-width .5s .4s ease)) ;
     @include transform-style(preserve-3d);
     
     &:after,
     &:before{
         position: absolute;
         content: '';
-        background: red;
-        right: -8%;
-        top: 0;
-        bottom: 0;
+        right: 0;
+        left: 0;
+        bottom: -40px;
         margin: auto;
         width: 30px;
         height: 30px;
         opacity: 0;
         @include border-radius(50%);
         @include transform( scale(1.1,2));
-        @include transition(( opacity .8s ease-out,transform 3.5s .5s ease));
+        @include transition(( opacity .8s ease-out,transform 1.5s .1s ease));
     }
     &:after{
         background: #000;
         z-index: 2;
         transition-delay: .5s;
-        @include transform(scale(1.1,2));
+        @include transform(scale(1,1));
     }
     &:before{
         background: #000;
         z-index: 3;
         transition-delay: .8s;
-        @include transform(scale(.51,1));
+        @include transform(scale(1));
     }
     
     > div{
         left: 0;
-        height: 500px;
+        height: $height-cellphone;
         position: absolute;
         top: 0;
-        width: 500px;
+        width: $width-cellphone;
         opacity: 0;
         @include transition(all .5s ease-out);
         @include transform(rotatex(0) translatez(0px));
@@ -109,15 +108,19 @@ body{
             max-width: 100%;
             margin-top: 6rem;
         }
+        iframe{
+            height: 100%;
+            width: 100%;
+        }
     }
     
     &.active{
         background: transparent;
         overflow: visible;
-        border-right-width: 50px;
-        border-color: #fff;
+        border-bottom-width: 50px;
+        border-color: $cellphone-active;
         @include box-shadow(0 0 10px #ddd);
-        @include transform( translatez(-380px) translatex(30px) scaleX(1.8) rotatey(4deg) rotatex(0deg) rotatez(0deg));
+        @include transform( translatez(-380px) translatex(30px) scaleX(1) rotatey(4deg) rotatex(0deg) rotatez(0deg));
         
         &:after,
         &:before{
@@ -125,10 +128,16 @@ body{
         }
         
         &:after{
-            background: #fff;
+            background: $cellphone-active;
             border: 2px solid #000;
             @include box-sizing(border-box);
-            @include transform(scale(1.1, 2) rotate(0deg));
+            @include transform(scale(1, 1) rotate(0deg));
+        }
+        
+        &:before{
+            bottom: -33px;
+            width: 16px;
+            height: 16px;
         }
         
         &:hover{
@@ -141,34 +150,33 @@ body{
             opacity: 1;
         }
         .front{
-            height: 500px;
-            @include box-shadow(0 0 30px 5px #999 inset);
+            height: $height-cellphone;
             @include transform(scale(1) translatez(0px));
             @include transition((transform .35s 2s ease-out,opacity .5s 1s ease-out,height .3s 1.9s ease-in));
         }
         .back{
             background-color: #212121;
-            @include transform(translatez(-280px));
+            @include transform(translatez( -($height-cellphone / 2)));
             @include transition((transform .5s 1s ease-out,opacity .5s 1s ease-out,box-shadow .5s 1.3s ease-out));
         }
         .bottom{
             background-color: #323232;
-            @include transform(rotatex(-90deg) translatez(250px) translatey(250px));
+            @include transform(rotatex(-90deg) translatez(($height-cellphone / 2)) translatey(($width-cellphone / 2)));
             @include transition(all .5s .2s ease-out);
         }
         .top{
             background-color: #323232;
-            @include transform(rotatex(90deg) translatez(250px) translatey(-250px));
+            @include transform(rotatex(90deg) translatez(($height-cellphone / 2)) translatey(-($width-cellphone / 2)));
             @include transition(all .5s .2s ease-out);
         }
         .right{
             background-color: #424242;
-            @include transform(rotatey(90deg) translatez(250px) translatex(250px));
+            @include transform(rotatey(90deg) translatez(($width-cellphone / 2)) translatex(($width-cellphone / 2)));
             @include transition(all .5s .5s ease-out);
         }
         .left{
             background-color: #424242;
-            @include transform(rotatey(-90deg) translatez(250px) translatex(-250px));
+            @include transform(rotatey(-90deg) translatez(($width-cellphone / 2)) translatex(-($width-cellphone / 2)));
             @include transition(all .5s .5s ease-out);
         }
     }
@@ -187,7 +195,7 @@ body{
     margin: auto;
     left: 0;
     right: 0;
-    top: 5%;
+    top: 2%;
     text-align: center;
     font-size: 1.5rem;
     cursor: pointer;
@@ -199,31 +207,27 @@ body{
     }
     
     &.active{
-        color: #ef5350;
-        border-color: #ef5350;
+        color: $btn-inactive;
+        border-color: $btn-inactive;
         
         &:hover,
         &:focus{
-            color: #66bb6a;
-            border-color: #66bb6a;
             
             &:before{
-                background: transparent;
+                background: white;
             }
         }
     }
 
     &.inactive{
-        color: #66bb6a;
-        border-color: #66bb6a;
+        color: $btn-active;
+        border-color: $btn-active;
         
         &:hover,
         &:focus{
-            color: #ef5350;
-            border-color: #ef5350;
             
             &:before{
-                background: transparent;
+                background: white;
             }
         }
     }
@@ -234,6 +238,10 @@ body{
         -moz-animation-play-state: running;
         -o-animation-play-state: running;
         animation-play-state: running;
+        
+        &:before{
+            height: 100%;
+        }
     }
     
     &:before{
@@ -242,7 +250,6 @@ body{
         width: 100%;
         height: 0%;
         bottom: 0;
-        top: 0;
         left: 0;
         display: block;
         background: transparent;
