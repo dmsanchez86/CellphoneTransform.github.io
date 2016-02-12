@@ -3,21 +3,21 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Cellphone 3D</title>
-		<link id="stylesheet" rel="stylesheet" href="portrait.css" type="text/css" />
-		<link rel="stylesheet" href="panel.css" type="text/css" />
+		<link id="stylesheet" rel="stylesheet" href="css/main.css" type="text/css" />
 	</head>
 
-	<body class="body">
+	<body class="body portrait">
 		
       <div class="cellphone">
         <div class="back"></div>
         <div class="front">
-            <iframe src="http://jurizquiz-dmsanchez86.c9.io"></iframe>
+            <iframe src="http://dmsanchez86.github.io/interactive_clock"></iframe>
         </div>
         <div class="bottom"></div>
         <div class="right"></div>
         <div class="top"></div>
         <div class="left"></div>
+        <button class="button_start"></button>
       </div>
       
       <div class="panel_left">
@@ -25,20 +25,24 @@
           <h6>CellPhone Position</h6>
           <div class="portrait">
             <input type="radio" name="position" id="portrait" value="portrait"/>
-            <label for="portrait">Portrait</label>
-            <div class="preview"></div>
+            <label for="portrait">
+              Portrait
+              <div class="preview"></div>
+            </label>
           </div>
           <div class="landscape">
             <input type="radio" name="position" id="landscape" value="landscape"/>
-            <label for="landscape">Landscape</label>
-            <div class="preview"></div>
+            <label for="landscape">
+              Landscape
+              <div class="preview"></div>
+            </label>
           </div>
         </div>
       </div>
       
       <div class="on_off inactive" state="off">On / Off</div>
       
-      <script type="text/javascript" src="waves.js"></script>
+      <script type="text/javascript" src="js/waves.js"></script>
       
 	</body>
 </html>

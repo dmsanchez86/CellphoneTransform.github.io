@@ -1,19 +1,34 @@
+var App = {
+    stateCellphone: false,
+};
+
 window.onload = function(){
     var cellphone = document.querySelector('.cellphone');
+    var button_start = document.querySelector('.button_start');
     var body = document.querySelector('.body');
     var btn_switch = document.querySelector('.on_off');
-    var position_cellphone = document.querySelectorAll('input[type=radio]');
-    var stylesheet = document.querySelector('#stylesheet');
+    var position_cellphone = document.querySelectorAll('.panel_left input[type=radio]');
+    var panel_left = document.querySelector('.panel_left');
+
+    setTimeout(function(){
+        panel_left.className = "panel_left ready";
+    },800);
     
     for (var i = 0; i < position_cellphone.length; i++) {
         position_cellphone[i].onchange = function(){
-            
-            stylesheet.setAttribute('href',this.value + '.css');
+            body.className = 'body ' +this.value;
         };
     }
     
     console.log(position_cellphone);
     
+    // click on the button cellphone
+    button_start.onclick = function(){
+        if(App.stateCellphone) cellphone.className  = 'cellphone';
+        else cellphone.className  = 'cellphone active';
+        App.stateCellphone = !App.stateCellphone;
+    }
+
     btn_switch.onclick = function(){
         var state = this.getAttribute('state');
         if(state == 'off'){
@@ -53,17 +68,13 @@ window.onload = function(){
         wave.style.top = position_Y + 'px';
         wave.className = 'wave';
         
-        body.style.perspectiveOrigin = 'center';
         body.appendChild(wave);
         
         setTimeout(function(){
             wave.className = 'wave effect';
             setTimeout(function(){
                 body.removeChild(wave);
-            },600);
-            setTimeout(function() {
-                body.style.perspectiveOrigin = '67% 44%';
-            },2000);
+            },300);
         },10);
         
     };

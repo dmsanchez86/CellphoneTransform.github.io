@@ -1,0 +1,150 @@
+@import url('http://fonts.googleapis.com/css?family=Just+Another+Hand');
+
+@import 'functions';
+@import 'variables';
+
+*{ @include reset(); }
+
+html{
+    height: 100%;
+}
+
+body{
+    font-size: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    @include gradient(radial, (#bbdefb, #111) );
+    @include perspective($perspective-body);
+    @include perspective-origin(center);
+    @include transition(all .5s ease);
+
+    &.landscape{
+        $height-cellphone: 320px;
+        $width-cellphone : 480px;
+
+        .cellphone{
+            @include block-cellphone(landscape);
+        }
+    }
+
+    &.portrait{
+        $width-cellphone : 320px;
+        $height-cellphone: 480px;
+
+        .cellphone{
+            @include block-cellphone(portrait);
+        }
+    }
+}
+
+.wave{
+    border: 5px solid #000;
+    height: 100px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100px;
+    z-index: 10;
+    @include gradient(radial, (#323232,#111 ) );
+    @include border-radius(50%);
+    @include box-shadow(0 0 5px 2px #323232);
+    @include box-sizing(border-box);
+    @include transition(transform 2s ease-in-out);
+    @include transform(scale(0));
+    
+    &.effect{
+        opacity: 1;
+        @include animation(wave .5s 1 ease);
+    }
+}
+
+.cellphone{
+    @include block-cellphone(portrait);
+}
+
+.on_off{
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    border: thin solid #ddd;
+    overflow: hidden;
+    color: #ddd;
+    display: none;
+    line-height: 1.5;
+    font-family: 'Just Another Hand', cursive;
+    z-index: 8;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 2%;
+    z-index: 11;
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    @include transform-origin(center bottom);
+    @include transition(all .4s ease-in-out);
+    
+    &.hover{
+        @include animation(skew .35s 2 linear);
+    }
+    
+    &.active{
+        color: $btn-inactive;
+        border-color: $btn-inactive;
+        
+        &:hover,
+        &:focus{
+            
+            &:before{
+                background: white;
+            }
+        }
+    }
+
+    &.inactive{
+        color: $btn-active;
+        border-color: $btn-active;
+        
+        &:hover,
+        &:focus{
+            
+            &:before{
+                background: white;
+            }
+        }
+    }
+    
+    &:hover,
+    &:focus{
+        -webkit-animation-play-state: running;
+        -moz-animation-play-state: running;
+        -o-animation-play-state: running;
+        animation-play-state: running;
+        
+        &:before{
+            height: 100%;
+        }
+    }
+    
+    &:before{
+        content: '';
+        z-index: -1;
+        width: 100%;
+        height: 0%;
+        bottom: 0;
+        left: 0;
+        display: block;
+        background: transparent;
+        position: absolute;
+        @include transition(height .5s .1s ease);
+    }
+    
+    &:before{
+        @include transform(rotatex(180deg));
+    }
+}
+
+@import 'panel';
+@import 'animations';

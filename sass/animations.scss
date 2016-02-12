@@ -1,17 +1,17 @@
 // Animation for wave
 @-webkit-keyframes wave {
     0%{ @include transform(scale(0));opacity: 0;}
-    100%{@include transform(scale(1));opacity: 1;}
+    100%{@include transform(scale(.15));opacity: 1;}
 }
 
 @-moz-keyframes wave {
     0%{ @include transform(scale(0));opacity: 0;}
-    100%{@include transform(scale(1));opacity: 1;}
+    100%{@include transform(scale(.15));opacity: 1;}
 }
 
 @keyframes wave {
     0%{ @include transform(scale(0));opacity: 0;}
-    100%{@include transform(scale(1));opacity: 1;}
+    100%{@include transform(scale(.15));opacity: 1;}
 }
 
 // Animation for button on / off

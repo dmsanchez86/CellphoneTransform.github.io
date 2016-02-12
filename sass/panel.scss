@@ -1,8 +1,3 @@
-@import url('http://fonts.googleapis.com/css?family=Just+Another+Hand');
-
-@import 'variables';
-@import 'functions';
-
 .panel_left{
     position: absolute;
     top: 0;
@@ -12,6 +7,20 @@
     padding: 1rem .5rem;
     max-height: 185px;
     margin: auto;
+    z-index: 11;
+    @include border-radius(0 3px 3px 0);
+    @include transform(rotatey(140deg));
+    @include transform-origin(left center);
+    @include transition(transform 1s cubic-bezier(.1,1.53,.28,.58));
+
+    &.ready{
+        @include transform(perspective(500px) rotatey(0deg));
+    }
+
+    &:hover{
+        @include transform(perspective(500px) rotatey(8deg));
+        @include box-shadow(0 0 4px rgba(255,255,255, .6));
+    }
     
     .content{
     

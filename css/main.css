@@ -1,0 +1,1170 @@
+@import url("http://fonts.googleapis.com/css?family=Just+Another+Hand");
+* {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+html {
+  height: 100%; }
+
+body {
+  font-size: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-image: -webkit-radial-gradient(#bbdefb, #111);
+  background-image: -khtml-radial-gradient(#bbdefb, #111);
+  background-image: -moz-radial-gradient(#bbdefb, #111);
+  background-image: -ms-radial-gradient(#bbdefb, #111);
+  background-image: -o-radial-gradient(#bbdefb, #111);
+  background-image: radial-gradient(#bbdefb, #111);
+  -webkit-perspective: 2000px;
+  -khtml-perspective: 2000px;
+  -moz-perspective: 2000px;
+  -ms-perspective: 2000px;
+  -o-perspective: 2000px;
+  perspective: 2000px;
+  -webkit-perspective-origin: center;
+  -khtml-perspective-origin: center;
+  -moz-perspective-origin: center;
+  -ms-perspective-origin: center;
+  -o-perspective-origin: center;
+  perspective-origin: center;
+  -webkit-transition: all 0.5s ease;
+  -khtml-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  body.landscape .cellphone {
+    border: 15px solid #111;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 11;
+    background-image: -webkit-linear-gradient(left, #323232, #111, #323232);
+    background-image: -khtml-linear-gradient(left, #323232, #111, #323232);
+    background-image: -moz-linear-gradient(left, #323232, #111, #323232);
+    background-image: -ms-linear-gradient(left, #323232, #111, #323232);
+    background-image: -o-linear-gradient(left, #323232, #111, #323232);
+    background-image: linear-gradient(left, #323232, #111, #323232);
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+    -khtml-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+    -moz-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+    -ms-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+    -o-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+    box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+    -webkit-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+    -khtml-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+    -moz-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+    -ms-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+    -o-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+    transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+    -webkit-transform-style: preserve-3d;
+    -khtml-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    height: 320px;
+    width: 480px;
+    border-right-width: 50px;
+    -webkit-transition: height 0.25s ease, width 0.25s ease, border-right-width 0.5s ease, border-color 0.5s linear, transform 1s ease-in-out, box-shadow 1s ease;
+    -khtml-transition: height 0.25s ease, width 0.25s ease, border-right-width 0.5s ease, border-color 0.5s linear, transform 1s ease-in-out, box-shadow 1s ease;
+    -moz-transition: height 0.25s ease, width 0.25s ease, border-right-width 0.5s ease, border-color 0.5s linear, transform 1s ease-in-out, box-shadow 1s ease;
+    -ms-transition: height 0.25s ease, width 0.25s ease, border-right-width 0.5s ease, border-color 0.5s linear, transform 1s ease-in-out, box-shadow 1s ease;
+    -o-transition: height 0.25s ease, width 0.25s ease, border-right-width 0.5s ease, border-color 0.5s linear, transform 1s ease-in-out, box-shadow 1s ease;
+    transition: height 0.25s ease, width 0.25s ease, border-right-width 0.5s ease, border-color 0.5s linear, transform 1s ease-in-out, box-shadow 1s ease; }
+    body.landscape .cellphone:after, body.landscape .cellphone:before {
+      bottom: 0;
+      right: -8%;
+      top: 0; }
+    body.landscape .cellphone > div {
+      left: 0;
+      height: 320px;
+      position: absolute;
+      top: 0;
+      width: 480px;
+      opacity: 0;
+      -webkit-transition: all 0.5s ease-out;
+      -khtml-transition: all 0.5s ease-out;
+      -moz-transition: all 0.5s ease-out;
+      -ms-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
+      -webkit-transform: rotatex(0) translatez(0px);
+      -khtml-transform: rotatex(0) translatez(0px);
+      -moz-transform: rotatex(0) translatez(0px);
+      -ms-transform: rotatex(0) translatez(0px);
+      -o-transform: rotatex(0) translatez(0px);
+      transform: rotatex(0) translatez(0px); }
+    body.landscape .cellphone.active {
+      border-right-width: 50px; }
+      body.landscape .cellphone.active:before {
+        bottom: -1.5px;
+        width: 16px;
+        height: 16px;
+        right: -6.5%;
+        left: initial; }
+      body.landscape .cellphone.active .back {
+        background-color: #212121;
+        -webkit-transform: translatez(-160px);
+        -khtml-transform: translatez(-160px);
+        -moz-transform: translatez(-160px);
+        -ms-transform: translatez(-160px);
+        -o-transform: translatez(-160px);
+        transform: translatez(-160px);
+        -webkit-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+        -khtml-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+        -moz-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+        -ms-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+        -o-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+        transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out; }
+      body.landscape .cellphone.active .front {
+        opacity: 1;
+        -webkit-transition: opacity 0.25s 1s ease-out;
+        -khtml-transition: opacity 0.25s 1s ease-out;
+        -moz-transition: opacity 0.25s 1s ease-out;
+        -ms-transition: opacity 0.25s 1s ease-out;
+        -o-transition: opacity 0.25s 1s ease-out;
+        transition: opacity 0.25s 1s ease-out; }
+      body.landscape .cellphone.active .bottom {
+        background-color: #323232;
+        -webkit-transform: rotatex(-90deg) translatez(160px) translatey(160px);
+        -khtml-transform: rotatex(-90deg) translatez(160px) translatey(160px);
+        -moz-transform: rotatex(-90deg) translatez(160px) translatey(160px);
+        -ms-transform: rotatex(-90deg) translatez(160px) translatey(160px);
+        -o-transform: rotatex(-90deg) translatez(160px) translatey(160px);
+        transform: rotatex(-90deg) translatez(160px) translatey(160px);
+        -webkit-transition: all 0.15s 0.3s ease-out;
+        -khtml-transition: all 0.15s 0.3s ease-out;
+        -moz-transition: all 0.15s 0.3s ease-out;
+        -ms-transition: all 0.15s 0.3s ease-out;
+        -o-transition: all 0.15s 0.3s ease-out;
+        transition: all 0.15s 0.3s ease-out; }
+      body.landscape .cellphone.active .top {
+        background-color: #323232;
+        -webkit-transform: rotatex(90deg) translatez(160px) translatey(-160px);
+        -khtml-transform: rotatex(90deg) translatez(160px) translatey(-160px);
+        -moz-transform: rotatex(90deg) translatez(160px) translatey(-160px);
+        -ms-transform: rotatex(90deg) translatez(160px) translatey(-160px);
+        -o-transform: rotatex(90deg) translatez(160px) translatey(-160px);
+        transform: rotatex(90deg) translatez(160px) translatey(-160px);
+        -webkit-transition: all 0.15s 0.3s ease-out;
+        -khtml-transition: all 0.15s 0.3s ease-out;
+        -moz-transition: all 0.15s 0.3s ease-out;
+        -ms-transition: all 0.15s 0.3s ease-out;
+        -o-transition: all 0.15s 0.3s ease-out;
+        transition: all 0.15s 0.3s ease-out; }
+      body.landscape .cellphone.active .right {
+        background-color: #424242;
+        -webkit-transform: rotatey(90deg) translatez(240px) translatex(240px);
+        -khtml-transform: rotatey(90deg) translatez(240px) translatex(240px);
+        -moz-transform: rotatey(90deg) translatez(240px) translatex(240px);
+        -ms-transform: rotatey(90deg) translatez(240px) translatex(240px);
+        -o-transform: rotatey(90deg) translatez(240px) translatex(240px);
+        transform: rotatey(90deg) translatez(240px) translatex(240px);
+        -webkit-transition: all 0.35s 0.4s ease-out;
+        -khtml-transition: all 0.35s 0.4s ease-out;
+        -moz-transition: all 0.35s 0.4s ease-out;
+        -ms-transition: all 0.35s 0.4s ease-out;
+        -o-transition: all 0.35s 0.4s ease-out;
+        transition: all 0.35s 0.4s ease-out; }
+      body.landscape .cellphone.active .left {
+        background-color: #424242;
+        -webkit-transform: rotatey(-90deg) translatez(240px) translatex(-240px);
+        -khtml-transform: rotatey(-90deg) translatez(240px) translatex(-240px);
+        -moz-transform: rotatey(-90deg) translatez(240px) translatex(-240px);
+        -ms-transform: rotatey(-90deg) translatez(240px) translatex(-240px);
+        -o-transform: rotatey(-90deg) translatez(240px) translatex(-240px);
+        transform: rotatey(-90deg) translatez(240px) translatex(-240px);
+        -webkit-transition: all 0.35s 0.4s ease-out;
+        -khtml-transition: all 0.35s 0.4s ease-out;
+        -moz-transition: all 0.35s 0.4s ease-out;
+        -ms-transition: all 0.35s 0.4s ease-out;
+        -o-transition: all 0.35s 0.4s ease-out;
+        transition: all 0.35s 0.4s ease-out; }
+    body.landscape .cellphone .button_start {
+      bottom: 0 !important;
+      right: -40px !important;
+      top: 0;
+      left: initial !important; }
+    body.landscape .cellphone .front {
+      opacity: 0;
+      overflow: hidden; }
+      body.landscape .cellphone .front img {
+        height: auto;
+        max-width: 100%;
+        margin-top: 6rem; }
+      body.landscape .cellphone .front iframe {
+        height: 100%;
+        width: 100%; }
+    body.landscape .cellphone .back {
+      background-image: -webkit-linear-gradient(left, #323232, #111, #323232);
+      background-image: -khtml-linear-gradient(left, #323232, #111, #323232);
+      background-image: -moz-linear-gradient(left, #323232, #111, #323232);
+      background-image: -ms-linear-gradient(left, #323232, #111, #323232);
+      background-image: -o-linear-gradient(left, #323232, #111, #323232);
+      background-image: linear-gradient(left, #323232, #111, #323232); }
+    body.landscape .cellphone.active {
+      background: transparent;
+      overflow: visible;
+      -webkit-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+      -khtml-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+      -moz-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+      -ms-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+      -o-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+      transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg); }
+      body.landscape .cellphone.active > div {
+        opacity: 1; }
+      body.landscape .cellphone.active .button_start {
+        background: transparent;
+        -webkit-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+        -khtml-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+        -moz-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+        -ms-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+        -o-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5); }
+        body.landscape .cellphone.active .button_start:before {
+          background: rgba(255, 255, 255, 0.5);
+          opacity: 1; }
+        body.landscape .cellphone.active .button_start:hover {
+          -webkit-box-shadow: 0 0 4px 1px white;
+          -khtml-box-shadow: 0 0 4px 1px white;
+          -moz-box-shadow: 0 0 4px 1px white;
+          -ms-box-shadow: 0 0 4px 1px white;
+          -o-box-shadow: 0 0 4px 1px white;
+          box-shadow: 0 0 4px 1px white; }
+          body.landscape .cellphone.active .button_start:hover:before {
+            opacity: 1; }
+    body.landscape .cellphone .button_start {
+      position: absolute;
+      bottom: -40px;
+      margin: auto;
+      left: 0;
+      right: 0;
+      width: 33px;
+      height: 33px;
+      cursor: pointer;
+      background: #111;
+      -webkit-box-shadow: 0 0 2px 1px #464646;
+      -khtml-box-shadow: 0 0 2px 1px #464646;
+      -moz-box-shadow: 0 0 2px 1px #464646;
+      -ms-box-shadow: 0 0 2px 1px #464646;
+      -o-box-shadow: 0 0 2px 1px #464646;
+      box-shadow: 0 0 2px 1px #464646;
+      -webkit-border-radius: 50%;
+      -khtml-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transition: all 0.25s ease;
+      -khtml-transition: all 0.25s ease;
+      -moz-transition: all 0.25s ease;
+      -ms-transition: all 0.25s ease;
+      -o-transition: all 0.25s ease;
+      transition: all 0.25s ease; }
+      body.landscape .cellphone .button_start:before {
+        background: rgba(70, 70, 70, 0.5);
+        width: 50%;
+        height: 50%;
+        content: '';
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-border-radius: 50%;
+        -khtml-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-transition: opacity 0.5s ease;
+        -khtml-transition: opacity 0.5s ease;
+        -moz-transition: opacity 0.5s ease;
+        -ms-transition: opacity 0.5s ease;
+        -o-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease; }
+      body.landscape .cellphone .button_start:focus {
+        outline: none; }
+      body.landscape .cellphone .button_start:hover {
+        -webkit-box-shadow: 0 0 4px 1px #464646;
+        -khtml-box-shadow: 0 0 4px 1px #464646;
+        -moz-box-shadow: 0 0 4px 1px #464646;
+        -ms-box-shadow: 0 0 4px 1px #464646;
+        -o-box-shadow: 0 0 4px 1px #464646;
+        box-shadow: 0 0 4px 1px #464646; }
+        body.landscape .cellphone .button_start:hover:before {
+          opacity: 1; }
+  body.portrait .cellphone {
+    border: 15px solid #111;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 11;
+    background-image: -webkit-linear-gradient(left, #323232, #111, #323232);
+    background-image: -khtml-linear-gradient(left, #323232, #111, #323232);
+    background-image: -moz-linear-gradient(left, #323232, #111, #323232);
+    background-image: -ms-linear-gradient(left, #323232, #111, #323232);
+    background-image: -o-linear-gradient(left, #323232, #111, #323232);
+    background-image: linear-gradient(left, #323232, #111, #323232);
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+    -khtml-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+    -moz-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+    -ms-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+    -o-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+    box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+    -webkit-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+    -khtml-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+    -moz-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+    -ms-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+    -o-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+    transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+    -webkit-transform-style: preserve-3d;
+    -khtml-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    height: 480px;
+    width: 320px;
+    border-bottom-width: 50px;
+    -webkit-transition: height 0.25s ease, width 0.25s ease, border-bottom-width 0.5s ease, border-color 0.51s linear, transform 1s ease-in-out, box-shadow 1s ease;
+    -khtml-transition: height 0.25s ease, width 0.25s ease, border-bottom-width 0.5s ease, border-color 0.51s linear, transform 1s ease-in-out, box-shadow 1s ease;
+    -moz-transition: height 0.25s ease, width 0.25s ease, border-bottom-width 0.5s ease, border-color 0.51s linear, transform 1s ease-in-out, box-shadow 1s ease;
+    -ms-transition: height 0.25s ease, width 0.25s ease, border-bottom-width 0.5s ease, border-color 0.51s linear, transform 1s ease-in-out, box-shadow 1s ease;
+    -o-transition: height 0.25s ease, width 0.25s ease, border-bottom-width 0.5s ease, border-color 0.51s linear, transform 1s ease-in-out, box-shadow 1s ease;
+    transition: height 0.25s ease, width 0.25s ease, border-bottom-width 0.5s ease, border-color 0.51s linear, transform 1s ease-in-out, box-shadow 1s ease; }
+    body.portrait .cellphone:after, body.portrait .cellphone:before {
+      bottom: -40px;
+      left: 0;
+      right: 0; }
+    body.portrait .cellphone > div {
+      left: 0;
+      height: 480px;
+      position: absolute;
+      top: 0;
+      width: 320px;
+      opacity: 0;
+      -webkit-transform: rotatex(0) translatez(0px);
+      -khtml-transform: rotatex(0) translatez(0px);
+      -moz-transform: rotatex(0) translatez(0px);
+      -ms-transform: rotatex(0) translatez(0px);
+      -o-transform: rotatex(0) translatez(0px);
+      transform: rotatex(0) translatez(0px); }
+    body.portrait .cellphone.active {
+      border-bottom-width: 50px; }
+      body.portrait .cellphone.active:before {
+        bottom: -33px;
+        width: 16px;
+        height: 16px; }
+      body.portrait .cellphone.active .back {
+        background-color: #212121;
+        -webkit-transform: translatez(-240px);
+        -khtml-transform: translatez(-240px);
+        -moz-transform: translatez(-240px);
+        -ms-transform: translatez(-240px);
+        -o-transform: translatez(-240px);
+        transform: translatez(-240px);
+        -webkit-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+        -khtml-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+        -moz-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+        -ms-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+        -o-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+        transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out; }
+      body.portrait .cellphone.active .front {
+        opacity: 1;
+        -webkit-transition: opacity 0.25s 1s ease-out;
+        -khtml-transition: opacity 0.25s 1s ease-out;
+        -moz-transition: opacity 0.25s 1s ease-out;
+        -ms-transition: opacity 0.25s 1s ease-out;
+        -o-transition: opacity 0.25s 1s ease-out;
+        transition: opacity 0.25s 1s ease-out; }
+      body.portrait .cellphone.active .bottom {
+        background-color: #323232;
+        -webkit-transform: rotatex(-90deg) translatez(240px) translatey(240px);
+        -khtml-transform: rotatex(-90deg) translatez(240px) translatey(240px);
+        -moz-transform: rotatex(-90deg) translatez(240px) translatey(240px);
+        -ms-transform: rotatex(-90deg) translatez(240px) translatey(240px);
+        -o-transform: rotatex(-90deg) translatez(240px) translatey(240px);
+        transform: rotatex(-90deg) translatez(240px) translatey(240px);
+        -webkit-transition: all 0.15s 0.3s ease-out;
+        -khtml-transition: all 0.15s 0.3s ease-out;
+        -moz-transition: all 0.15s 0.3s ease-out;
+        -ms-transition: all 0.15s 0.3s ease-out;
+        -o-transition: all 0.15s 0.3s ease-out;
+        transition: all 0.15s 0.3s ease-out; }
+      body.portrait .cellphone.active .top {
+        background-color: #323232;
+        -webkit-transform: rotatex(90deg) translatez(240px) translatey(-240px);
+        -khtml-transform: rotatex(90deg) translatez(240px) translatey(-240px);
+        -moz-transform: rotatex(90deg) translatez(240px) translatey(-240px);
+        -ms-transform: rotatex(90deg) translatez(240px) translatey(-240px);
+        -o-transform: rotatex(90deg) translatez(240px) translatey(-240px);
+        transform: rotatex(90deg) translatez(240px) translatey(-240px);
+        -webkit-transition: all 0.15s 0.3s ease-out;
+        -khtml-transition: all 0.15s 0.3s ease-out;
+        -moz-transition: all 0.15s 0.3s ease-out;
+        -ms-transition: all 0.15s 0.3s ease-out;
+        -o-transition: all 0.15s 0.3s ease-out;
+        transition: all 0.15s 0.3s ease-out; }
+      body.portrait .cellphone.active .right {
+        background-color: #424242;
+        -webkit-transform: rotatey(90deg) translatez(160px) translatex(160px);
+        -khtml-transform: rotatey(90deg) translatez(160px) translatex(160px);
+        -moz-transform: rotatey(90deg) translatez(160px) translatex(160px);
+        -ms-transform: rotatey(90deg) translatez(160px) translatex(160px);
+        -o-transform: rotatey(90deg) translatez(160px) translatex(160px);
+        transform: rotatey(90deg) translatez(160px) translatex(160px);
+        -webkit-transition: all 0.35s 0.4s ease-out;
+        -khtml-transition: all 0.35s 0.4s ease-out;
+        -moz-transition: all 0.35s 0.4s ease-out;
+        -ms-transition: all 0.35s 0.4s ease-out;
+        -o-transition: all 0.35s 0.4s ease-out;
+        transition: all 0.35s 0.4s ease-out; }
+      body.portrait .cellphone.active .left {
+        background-color: #424242;
+        -webkit-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+        -khtml-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+        -moz-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+        -ms-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+        -o-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+        transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+        -webkit-transition: all 0.35s 0.4s ease-out;
+        -khtml-transition: all 0.35s 0.4s ease-out;
+        -moz-transition: all 0.35s 0.4s ease-out;
+        -ms-transition: all 0.35s 0.4s ease-out;
+        -o-transition: all 0.35s 0.4s ease-out;
+        transition: all 0.35s 0.4s ease-out; }
+    body.portrait .cellphone .front {
+      opacity: 0;
+      overflow: hidden; }
+      body.portrait .cellphone .front img {
+        height: auto;
+        max-width: 100%;
+        margin-top: 6rem; }
+      body.portrait .cellphone .front iframe {
+        height: 100%;
+        width: 100%; }
+    body.portrait .cellphone .back {
+      background-image: -webkit-linear-gradient(left, #323232, #111, #323232);
+      background-image: -khtml-linear-gradient(left, #323232, #111, #323232);
+      background-image: -moz-linear-gradient(left, #323232, #111, #323232);
+      background-image: -ms-linear-gradient(left, #323232, #111, #323232);
+      background-image: -o-linear-gradient(left, #323232, #111, #323232);
+      background-image: linear-gradient(left, #323232, #111, #323232); }
+    body.portrait .cellphone.active {
+      background: transparent;
+      overflow: visible;
+      -webkit-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+      -khtml-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+      -moz-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+      -ms-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+      -o-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+      transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg); }
+      body.portrait .cellphone.active > div {
+        opacity: 1; }
+      body.portrait .cellphone.active .button_start {
+        background: transparent;
+        -webkit-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+        -khtml-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+        -moz-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+        -ms-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+        -o-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5); }
+        body.portrait .cellphone.active .button_start:before {
+          background: rgba(255, 255, 255, 0.5);
+          opacity: 1; }
+        body.portrait .cellphone.active .button_start:hover {
+          -webkit-box-shadow: 0 0 4px 1px white;
+          -khtml-box-shadow: 0 0 4px 1px white;
+          -moz-box-shadow: 0 0 4px 1px white;
+          -ms-box-shadow: 0 0 4px 1px white;
+          -o-box-shadow: 0 0 4px 1px white;
+          box-shadow: 0 0 4px 1px white; }
+          body.portrait .cellphone.active .button_start:hover:before {
+            opacity: 1; }
+    body.portrait .cellphone .button_start {
+      position: absolute;
+      bottom: -40px;
+      margin: auto;
+      left: 0;
+      right: 0;
+      width: 33px;
+      height: 33px;
+      cursor: pointer;
+      background: #111;
+      -webkit-box-shadow: 0 0 2px 1px #464646;
+      -khtml-box-shadow: 0 0 2px 1px #464646;
+      -moz-box-shadow: 0 0 2px 1px #464646;
+      -ms-box-shadow: 0 0 2px 1px #464646;
+      -o-box-shadow: 0 0 2px 1px #464646;
+      box-shadow: 0 0 2px 1px #464646;
+      -webkit-border-radius: 50%;
+      -khtml-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transition: all 0.25s ease;
+      -khtml-transition: all 0.25s ease;
+      -moz-transition: all 0.25s ease;
+      -ms-transition: all 0.25s ease;
+      -o-transition: all 0.25s ease;
+      transition: all 0.25s ease; }
+      body.portrait .cellphone .button_start:before {
+        background: rgba(70, 70, 70, 0.5);
+        width: 50%;
+        height: 50%;
+        content: '';
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        -webkit-border-radius: 50%;
+        -khtml-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-transition: opacity 0.5s ease;
+        -khtml-transition: opacity 0.5s ease;
+        -moz-transition: opacity 0.5s ease;
+        -ms-transition: opacity 0.5s ease;
+        -o-transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease; }
+      body.portrait .cellphone .button_start:focus {
+        outline: none; }
+      body.portrait .cellphone .button_start:hover {
+        -webkit-box-shadow: 0 0 4px 1px #464646;
+        -khtml-box-shadow: 0 0 4px 1px #464646;
+        -moz-box-shadow: 0 0 4px 1px #464646;
+        -ms-box-shadow: 0 0 4px 1px #464646;
+        -o-box-shadow: 0 0 4px 1px #464646;
+        box-shadow: 0 0 4px 1px #464646; }
+        body.portrait .cellphone .button_start:hover:before {
+          opacity: 1; }
+
+.wave {
+  border: 5px solid #000;
+  height: 100px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+  z-index: 10;
+  background-image: -webkit-radial-gradient(#323232, #111);
+  background-image: -khtml-radial-gradient(#323232, #111);
+  background-image: -moz-radial-gradient(#323232, #111);
+  background-image: -ms-radial-gradient(#323232, #111);
+  background-image: -o-radial-gradient(#323232, #111);
+  background-image: radial-gradient(#323232, #111);
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px 2px #323232;
+  -khtml-box-shadow: 0 0 5px 2px #323232;
+  -moz-box-shadow: 0 0 5px 2px #323232;
+  -ms-box-shadow: 0 0 5px 2px #323232;
+  -o-box-shadow: 0 0 5px 2px #323232;
+  box-shadow: 0 0 5px 2px #323232;
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: transform 2s ease-in-out;
+  -khtml-transition: transform 2s ease-in-out;
+  -moz-transition: transform 2s ease-in-out;
+  -ms-transition: transform 2s ease-in-out;
+  -o-transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
+  -webkit-transform: scale(0);
+  -khtml-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0); }
+  .wave.effect {
+    opacity: 1;
+    -webkit-animation: wave 0.5s 1 ease;
+    -khtml-animation: wave 0.5s 1 ease;
+    -moz-animation: wave 0.5s 1 ease;
+    -ms-animation: wave 0.5s 1 ease;
+    -o-animation: wave 0.5s 1 ease;
+    animation: wave 0.5s 1 ease; }
+
+.cellphone {
+  border: 15px solid #111;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 11;
+  background-image: -webkit-linear-gradient(left, #323232, #111, #323232);
+  background-image: -khtml-linear-gradient(left, #323232, #111, #323232);
+  background-image: -moz-linear-gradient(left, #323232, #111, #323232);
+  background-image: -ms-linear-gradient(left, #323232, #111, #323232);
+  background-image: -o-linear-gradient(left, #323232, #111, #323232);
+  background-image: linear-gradient(left, #323232, #111, #323232);
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+  -khtml-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+  -moz-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+  -ms-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+  -o-box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+  box-shadow: 0 0 17px black, 0px 0px 2px rgba(255, 255, 255, 0.18) inset;
+  -webkit-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+  -khtml-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+  -moz-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+  -ms-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+  -o-transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+  transform: translatez(0px) translatex(0px) scaleX(1) rotatey(0);
+  -webkit-transform-style: preserve-3d;
+  -khtml-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 480px;
+  width: 320px;
+  border-bottom-width: 50px;
+  -webkit-transition: height 0.25s ease, width 0.25s ease, border-bottom-width 0.5s ease, border-color 0.51s linear, transform 1s ease-in-out, box-shadow 1s ease;
+  -khtml-transition: height 0.25s ease, width 0.25s ease, border-bottom-width 0.5s ease, border-color 0.51s linear, transform 1s ease-in-out, box-shadow 1s ease;
+  -moz-transition: height 0.25s ease, width 0.25s ease, border-bottom-width 0.5s ease, border-color 0.51s linear, transform 1s ease-in-out, box-shadow 1s ease;
+  -ms-transition: height 0.25s ease, width 0.25s ease, border-bottom-width 0.5s ease, border-color 0.51s linear, transform 1s ease-in-out, box-shadow 1s ease;
+  -o-transition: height 0.25s ease, width 0.25s ease, border-bottom-width 0.5s ease, border-color 0.51s linear, transform 1s ease-in-out, box-shadow 1s ease;
+  transition: height 0.25s ease, width 0.25s ease, border-bottom-width 0.5s ease, border-color 0.51s linear, transform 1s ease-in-out, box-shadow 1s ease; }
+  .cellphone:after, .cellphone:before {
+    bottom: -40px;
+    left: 0;
+    right: 0; }
+  .cellphone > div {
+    left: 0;
+    height: 480px;
+    position: absolute;
+    top: 0;
+    width: 320px;
+    opacity: 0;
+    -webkit-transform: rotatex(0) translatez(0px);
+    -khtml-transform: rotatex(0) translatez(0px);
+    -moz-transform: rotatex(0) translatez(0px);
+    -ms-transform: rotatex(0) translatez(0px);
+    -o-transform: rotatex(0) translatez(0px);
+    transform: rotatex(0) translatez(0px); }
+  .cellphone.active {
+    border-bottom-width: 50px; }
+    .cellphone.active:before {
+      bottom: -33px;
+      width: 16px;
+      height: 16px; }
+    .cellphone.active .back {
+      background-color: #212121;
+      -webkit-transform: translatez(-240px);
+      -khtml-transform: translatez(-240px);
+      -moz-transform: translatez(-240px);
+      -ms-transform: translatez(-240px);
+      -o-transform: translatez(-240px);
+      transform: translatez(-240px);
+      -webkit-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+      -khtml-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+      -moz-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+      -ms-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+      -o-transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out;
+      transition: transform 0.15s ease-out, opacity 0.5s 0.4s ease-out; }
+    .cellphone.active .front {
+      opacity: 1;
+      -webkit-transition: opacity 0.25s 1s ease-out;
+      -khtml-transition: opacity 0.25s 1s ease-out;
+      -moz-transition: opacity 0.25s 1s ease-out;
+      -ms-transition: opacity 0.25s 1s ease-out;
+      -o-transition: opacity 0.25s 1s ease-out;
+      transition: opacity 0.25s 1s ease-out; }
+    .cellphone.active .bottom {
+      background-color: #323232;
+      -webkit-transform: rotatex(-90deg) translatez(240px) translatey(240px);
+      -khtml-transform: rotatex(-90deg) translatez(240px) translatey(240px);
+      -moz-transform: rotatex(-90deg) translatez(240px) translatey(240px);
+      -ms-transform: rotatex(-90deg) translatez(240px) translatey(240px);
+      -o-transform: rotatex(-90deg) translatez(240px) translatey(240px);
+      transform: rotatex(-90deg) translatez(240px) translatey(240px);
+      -webkit-transition: all 0.15s 0.3s ease-out;
+      -khtml-transition: all 0.15s 0.3s ease-out;
+      -moz-transition: all 0.15s 0.3s ease-out;
+      -ms-transition: all 0.15s 0.3s ease-out;
+      -o-transition: all 0.15s 0.3s ease-out;
+      transition: all 0.15s 0.3s ease-out; }
+    .cellphone.active .top {
+      background-color: #323232;
+      -webkit-transform: rotatex(90deg) translatez(240px) translatey(-240px);
+      -khtml-transform: rotatex(90deg) translatez(240px) translatey(-240px);
+      -moz-transform: rotatex(90deg) translatez(240px) translatey(-240px);
+      -ms-transform: rotatex(90deg) translatez(240px) translatey(-240px);
+      -o-transform: rotatex(90deg) translatez(240px) translatey(-240px);
+      transform: rotatex(90deg) translatez(240px) translatey(-240px);
+      -webkit-transition: all 0.15s 0.3s ease-out;
+      -khtml-transition: all 0.15s 0.3s ease-out;
+      -moz-transition: all 0.15s 0.3s ease-out;
+      -ms-transition: all 0.15s 0.3s ease-out;
+      -o-transition: all 0.15s 0.3s ease-out;
+      transition: all 0.15s 0.3s ease-out; }
+    .cellphone.active .right {
+      background-color: #424242;
+      -webkit-transform: rotatey(90deg) translatez(160px) translatex(160px);
+      -khtml-transform: rotatey(90deg) translatez(160px) translatex(160px);
+      -moz-transform: rotatey(90deg) translatez(160px) translatex(160px);
+      -ms-transform: rotatey(90deg) translatez(160px) translatex(160px);
+      -o-transform: rotatey(90deg) translatez(160px) translatex(160px);
+      transform: rotatey(90deg) translatez(160px) translatex(160px);
+      -webkit-transition: all 0.35s 0.4s ease-out;
+      -khtml-transition: all 0.35s 0.4s ease-out;
+      -moz-transition: all 0.35s 0.4s ease-out;
+      -ms-transition: all 0.35s 0.4s ease-out;
+      -o-transition: all 0.35s 0.4s ease-out;
+      transition: all 0.35s 0.4s ease-out; }
+    .cellphone.active .left {
+      background-color: #424242;
+      -webkit-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+      -khtml-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+      -moz-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+      -ms-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+      -o-transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+      transform: rotatey(-90deg) translatez(160px) translatex(-160px);
+      -webkit-transition: all 0.35s 0.4s ease-out;
+      -khtml-transition: all 0.35s 0.4s ease-out;
+      -moz-transition: all 0.35s 0.4s ease-out;
+      -ms-transition: all 0.35s 0.4s ease-out;
+      -o-transition: all 0.35s 0.4s ease-out;
+      transition: all 0.35s 0.4s ease-out; }
+  .cellphone .front {
+    opacity: 0;
+    overflow: hidden; }
+    .cellphone .front img {
+      height: auto;
+      max-width: 100%;
+      margin-top: 6rem; }
+    .cellphone .front iframe {
+      height: 100%;
+      width: 100%; }
+  .cellphone .back {
+    background-image: -webkit-linear-gradient(left, #323232, #111, #323232);
+    background-image: -khtml-linear-gradient(left, #323232, #111, #323232);
+    background-image: -moz-linear-gradient(left, #323232, #111, #323232);
+    background-image: -ms-linear-gradient(left, #323232, #111, #323232);
+    background-image: -o-linear-gradient(left, #323232, #111, #323232);
+    background-image: linear-gradient(left, #323232, #111, #323232); }
+  .cellphone.active {
+    background: transparent;
+    overflow: visible;
+    -webkit-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+    -khtml-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+    -moz-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+    -ms-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+    -o-transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg);
+    transform: translatez(-380px) translatex(30px) scaleX(1) rotatey(0deg) rotatex(0deg) rotatez(0deg); }
+    .cellphone.active > div {
+      opacity: 1; }
+    .cellphone.active .button_start {
+      background: transparent;
+      -webkit-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+      -khtml-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+      -moz-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+      -ms-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+      -o-box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5); }
+      .cellphone.active .button_start:before {
+        background: rgba(255, 255, 255, 0.5);
+        opacity: 1; }
+      .cellphone.active .button_start:hover {
+        -webkit-box-shadow: 0 0 4px 1px white;
+        -khtml-box-shadow: 0 0 4px 1px white;
+        -moz-box-shadow: 0 0 4px 1px white;
+        -ms-box-shadow: 0 0 4px 1px white;
+        -o-box-shadow: 0 0 4px 1px white;
+        box-shadow: 0 0 4px 1px white; }
+        .cellphone.active .button_start:hover:before {
+          opacity: 1; }
+  .cellphone .button_start {
+    position: absolute;
+    bottom: -40px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    background: #111;
+    -webkit-box-shadow: 0 0 2px 1px #464646;
+    -khtml-box-shadow: 0 0 2px 1px #464646;
+    -moz-box-shadow: 0 0 2px 1px #464646;
+    -ms-box-shadow: 0 0 2px 1px #464646;
+    -o-box-shadow: 0 0 2px 1px #464646;
+    box-shadow: 0 0 2px 1px #464646;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 0.25s ease;
+    -khtml-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease; }
+    .cellphone .button_start:before {
+      background: rgba(70, 70, 70, 0.5);
+      width: 50%;
+      height: 50%;
+      content: '';
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      -webkit-border-radius: 50%;
+      -khtml-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transition: opacity 0.5s ease;
+      -khtml-transition: opacity 0.5s ease;
+      -moz-transition: opacity 0.5s ease;
+      -ms-transition: opacity 0.5s ease;
+      -o-transition: opacity 0.5s ease;
+      transition: opacity 0.5s ease; }
+    .cellphone .button_start:focus {
+      outline: none; }
+    .cellphone .button_start:hover {
+      -webkit-box-shadow: 0 0 4px 1px #464646;
+      -khtml-box-shadow: 0 0 4px 1px #464646;
+      -moz-box-shadow: 0 0 4px 1px #464646;
+      -ms-box-shadow: 0 0 4px 1px #464646;
+      -o-box-shadow: 0 0 4px 1px #464646;
+      box-shadow: 0 0 4px 1px #464646; }
+      .cellphone .button_start:hover:before {
+        opacity: 1; }
+
+.on_off {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  border: thin solid #ddd;
+  overflow: hidden;
+  color: #ddd;
+  display: none;
+  line-height: 1.5;
+  font-family: 'Just Another Hand', cursive;
+  z-index: 8;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 2%;
+  z-index: 11;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  -webkit-transform-origin: center bottom;
+  -khtml-transform-origin: center bottom;
+  -moz-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  -o-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-transition: all 0.4s ease-in-out;
+  -khtml-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+  .on_off.hover {
+    -webkit-animation: skew 0.35s 2 linear;
+    -khtml-animation: skew 0.35s 2 linear;
+    -moz-animation: skew 0.35s 2 linear;
+    -ms-animation: skew 0.35s 2 linear;
+    -o-animation: skew 0.35s 2 linear;
+    animation: skew 0.35s 2 linear; }
+  .on_off.active {
+    color: #ef5350;
+    border-color: #ef5350; }
+    .on_off.active:hover:before, .on_off.active:focus:before {
+      background: white; }
+  .on_off.inactive {
+    color: #66bb6a;
+    border-color: #66bb6a; }
+    .on_off.inactive:hover:before, .on_off.inactive:focus:before {
+      background: white; }
+  .on_off:hover, .on_off:focus {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    animation-play-state: running; }
+    .on_off:hover:before, .on_off:focus:before {
+      height: 100%; }
+  .on_off:before {
+    content: '';
+    z-index: -1;
+    width: 100%;
+    height: 0%;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background: transparent;
+    position: absolute;
+    -webkit-transition: height 0.5s 0.1s ease;
+    -khtml-transition: height 0.5s 0.1s ease;
+    -moz-transition: height 0.5s 0.1s ease;
+    -ms-transition: height 0.5s 0.1s ease;
+    -o-transition: height 0.5s 0.1s ease;
+    transition: height 0.5s 0.1s ease; }
+  .on_off:before {
+    -webkit-transform: rotatex(180deg);
+    -khtml-transform: rotatex(180deg);
+    -moz-transform: rotatex(180deg);
+    -ms-transform: rotatex(180deg);
+    -o-transform: rotatex(180deg);
+    transform: rotatex(180deg); }
+
+.panel_left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  padding: 1rem .5rem;
+  max-height: 185px;
+  margin: auto;
+  z-index: 11;
+  -webkit-border-radius: 0 3px 3px 0;
+  -khtml-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  -webkit-transform: rotatey(140deg);
+  -khtml-transform: rotatey(140deg);
+  -moz-transform: rotatey(140deg);
+  -ms-transform: rotatey(140deg);
+  -o-transform: rotatey(140deg);
+  transform: rotatey(140deg);
+  -webkit-transform-origin: left center;
+  -khtml-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition: transform 1s cubic-bezier(0.1, 1.53, 0.28, 0.58);
+  -khtml-transition: transform 1s cubic-bezier(0.1, 1.53, 0.28, 0.58);
+  -moz-transition: transform 1s cubic-bezier(0.1, 1.53, 0.28, 0.58);
+  -ms-transition: transform 1s cubic-bezier(0.1, 1.53, 0.28, 0.58);
+  -o-transition: transform 1s cubic-bezier(0.1, 1.53, 0.28, 0.58);
+  transition: transform 1s cubic-bezier(0.1, 1.53, 0.28, 0.58); }
+  .panel_left.ready {
+    -webkit-transform: perspective(500px) rotatey(0deg);
+    -khtml-transform: perspective(500px) rotatey(0deg);
+    -moz-transform: perspective(500px) rotatey(0deg);
+    -ms-transform: perspective(500px) rotatey(0deg);
+    -o-transform: perspective(500px) rotatey(0deg);
+    transform: perspective(500px) rotatey(0deg); }
+  .panel_left:hover {
+    -webkit-transform: perspective(500px) rotatey(8deg);
+    -khtml-transform: perspective(500px) rotatey(8deg);
+    -moz-transform: perspective(500px) rotatey(8deg);
+    -ms-transform: perspective(500px) rotatey(8deg);
+    -o-transform: perspective(500px) rotatey(8deg);
+    transform: perspective(500px) rotatey(8deg);
+    -webkit-box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+    -khtml-box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+    -moz-box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+    -ms-box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+    -o-box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.6); }
+  .panel_left .content h6 {
+    font-family: 'Just Another Hand', cursive;
+    color: #66bb6a;
+    font-size: 1.3rem;
+    text-align: center; }
+  .panel_left .content > div {
+    margin: 1rem 0;
+    cursor: pointer; }
+    .panel_left .content > div:hover label, .panel_left .content > divfocus label {
+      color: #fbc02d; }
+  .panel_left .content input[type=radio] {
+    display: none; }
+  .panel_left .content label {
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    font-family: 'Just Another Hand';
+    -webkit-transition: color 0.5s ease;
+    -khtml-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    transition: color 0.5s ease; }
+  .panel_left .content .preview {
+    background: #888;
+    border: 2px solid #323232;
+    margin: 0 auto;
+    position: relative;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px; }
+    .panel_left .content .preview:before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 2.5%;
+      width: 95%;
+      height: 95%;
+      content: '';
+      background: #323232; }
+  .panel_left .content .landscape .preview {
+    width: 48px;
+    height: 32px; }
+  .panel_left .content .portrait .preview {
+    width: 32px;
+    height: 48px; }
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: scale(0);
+    -khtml-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(0.15);
+    -khtml-transform: scale(0.15);
+    -moz-transform: scale(0.15);
+    -ms-transform: scale(0.15);
+    -o-transform: scale(0.15);
+    transform: scale(0.15);
+    opacity: 1; } }
+@-moz-keyframes wave {
+  0% {
+    -webkit-transform: scale(0);
+    -khtml-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(0.15);
+    -khtml-transform: scale(0.15);
+    -moz-transform: scale(0.15);
+    -ms-transform: scale(0.15);
+    -o-transform: scale(0.15);
+    transform: scale(0.15);
+    opacity: 1; } }
+@keyframes wave {
+  0% {
+    -webkit-transform: scale(0);
+    -khtml-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(0.15);
+    -khtml-transform: scale(0.15);
+    -moz-transform: scale(0.15);
+    -ms-transform: scale(0.15);
+    -o-transform: scale(0.15);
+    transform: scale(0.15);
+    opacity: 1; } }
+@-webkit-keyframes skew {
+  12%,76% {
+    -webkit-transform: skewx(-5deg);
+    -khtml-transform: skewx(-5deg);
+    -moz-transform: skewx(-5deg);
+    -ms-transform: skewx(-5deg);
+    -o-transform: skewx(-5deg);
+    transform: skewx(-5deg); }
+  36%,85% {
+    -webkit-transform: skewx(5deg);
+    -khtml-transform: skewx(5deg);
+    -moz-transform: skewx(5deg);
+    -ms-transform: skewx(5deg);
+    -o-transform: skewx(5deg);
+    transform: skewx(5deg); } }
+@-moz-keyframes skew {
+  12%,76% {
+    -webkit-transform: skewx(-5deg);
+    -khtml-transform: skewx(-5deg);
+    -moz-transform: skewx(-5deg);
+    -ms-transform: skewx(-5deg);
+    -o-transform: skewx(-5deg);
+    transform: skewx(-5deg); }
+  36%,85% {
+    -webkit-transform: skewx(5deg);
+    -khtml-transform: skewx(5deg);
+    -moz-transform: skewx(5deg);
+    -ms-transform: skewx(5deg);
+    -o-transform: skewx(5deg);
+    transform: skewx(5deg); } }
+@keyframes skew {
+  12%,76% {
+    -webkit-transform: skewx(-5deg);
+    -khtml-transform: skewx(-5deg);
+    -moz-transform: skewx(-5deg);
+    -ms-transform: skewx(-5deg);
+    -o-transform: skewx(-5deg);
+    transform: skewx(-5deg); }
+  36%,85% {
+    -webkit-transform: skewx(5deg);
+    -khtml-transform: skewx(5deg);
+    -moz-transform: skewx(5deg);
+    -ms-transform: skewx(5deg);
+    -o-transform: skewx(5deg);
+    transform: skewx(5deg); } }
+
+/*# sourceMappingURL=main.css.map */
