@@ -745,6 +745,11 @@
       top: 0;
       left: initial!important;
     }
+
+    .button_test{
+      left: -60px;
+      right: initial;
+    }
   }
   
   .front{
@@ -830,6 +835,26 @@
       &:before{
         opacity: 1;
       }
+    }
+  }
+
+  .button_test{
+    position: absolute;
+    top: 0;
+    right: -67px;
+    border: 3px solid #0732D6;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #0E3FF3;
+    background-image: url(../img/settings.png);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include border-radius(50%);
+
+    &:focus{
+      outline: none;
     }
   }
 }

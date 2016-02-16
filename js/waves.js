@@ -4,7 +4,9 @@ var App = {
 
 window.onload = function(){
     var cellphone = document.querySelector('.cellphone');
+    var iframe = document.querySelector('.cellphone .front iframe');
     var button_start = document.querySelector('.button_start');
+    var button_test = document.querySelector('.button_test');
     var body = document.querySelector('.body');
     var btn_switch = document.querySelector('.on_off');
     var position_cellphone = document.querySelectorAll('.panel_left input[type=radio]');
@@ -27,6 +29,22 @@ window.onload = function(){
         if(App.stateCellphone) cellphone.className  = 'cellphone';
         else cellphone.className  = 'cellphone active';
         App.stateCellphone = !App.stateCellphone;
+    }
+
+    // click on the button change url
+    button_test.onclick = function(){
+        var url = prompt("Type your URL:", 'http://dmsanchez86.github.io');
+
+        var pattern = /^(http|https)\:\/\/[a-z0-9\.-]+\.[a-z]{2,4}/gi;
+
+        if(url != null || url != undefined){
+            if(url.match(pattern))
+                iframe.src = url;
+            else
+                alert("The URL is invalid");
+        }else{
+            return;
+        }
     }
 
     btn_switch.onclick = function(){

@@ -199,6 +199,9 @@ body {
       right: -40px !important;
       top: 0;
       left: initial !important; }
+    body.landscape .cellphone .button_test {
+      left: -60px;
+      right: initial; }
     body.landscape .cellphone .front {
       opacity: 0;
       overflow: hidden; }
@@ -310,6 +313,27 @@ body {
         box-shadow: 0 0 4px 1px #464646; }
         body.landscape .cellphone .button_start:hover:before {
           opacity: 1; }
+    body.landscape .cellphone .button_test {
+      position: absolute;
+      top: 0;
+      right: -67px;
+      border: 3px solid #0732D6;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      background-color: #0E3FF3;
+      background-image: url(../img/settings.png);
+      background-size: 65%;
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-border-radius: 50%;
+      -khtml-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%; }
+      body.landscape .cellphone .button_test:focus {
+        outline: none; }
   body.portrait .cellphone {
     border: 15px solid #111;
     bottom: 0;
@@ -570,6 +594,27 @@ body {
         box-shadow: 0 0 4px 1px #464646; }
         body.portrait .cellphone .button_start:hover:before {
           opacity: 1; }
+    body.portrait .cellphone .button_test {
+      position: absolute;
+      top: 0;
+      right: -67px;
+      border: 3px solid #0732D6;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      background-color: #0E3FF3;
+      background-image: url(../img/settings.png);
+      background-size: 65%;
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-border-radius: 50%;
+      -khtml-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%; }
+      body.portrait .cellphone .button_test:focus {
+        outline: none; }
 
 .wave {
   border: 5px solid #000;
@@ -884,6 +929,27 @@ body {
       box-shadow: 0 0 4px 1px #464646; }
       .cellphone .button_start:hover:before {
         opacity: 1; }
+  .cellphone .button_test {
+    position: absolute;
+    top: 0;
+    right: -67px;
+    border: 3px solid #0732D6;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #0E3FF3;
+    background-image: url(../img/settings.png);
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%; }
+    .cellphone .button_test:focus {
+      outline: none; }
 
 .on_off {
   position: absolute;
