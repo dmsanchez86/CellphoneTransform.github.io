@@ -1,8 +1,8 @@
-## Effect Waves
+## Cellphone Effect 3D With CSS3 Transforms
 
-#### Made by [Daniel Mauricio Sánchez](http://github.com/dmsanchez86)
+#### Made by [Daniel Mauricio Sánchez](http://dmsanchez86.github.io/#about)
 
-[Preview on github pages](http://dmsanchez86.github.io/cellphone-3d/)
+[Preview on GitHub Pages](http://dmsanchez86.github.io/cellphone-3d/)
 
 > Technologies
 
